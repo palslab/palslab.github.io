@@ -144,7 +144,7 @@
   selected: true
 - id: fca-2022
   authors: [Hongjie Li, Jasper Janssens, "…", Soumitra Pal, Teresa M. Przytycka, "…", Brian Oliver, Norbert Perrimon, Bart Deplancke, Stephen R. Quake, Liqun Luo, Stein Aerts]
-  title: "Fly Cell Atlas: a single-cell transcriptomic atlas of the adult fruit fly"
+  title: "Fly Cell Atlas: a single-nucleus transcriptomic atlas of the adult fruit fly"
   venue: "Science 375(6584): eabk2432"
   year: 2022
   doi: 10.1126/science.abk2432

@@ -48,7 +48,6 @@ Unverified URLs:
 
 ## Missing assets / decisions
 
-- [ ] Fly Cell Atlas title: CV says "single-cell"; published title is likely "single-nucleus" — confirm
 - [ ] CV PDF for the public site (a version without home address/phone) → `public/cv.pdf`, then `pi.links.cv: /cv.pdf`
 - [ ] Mailing address (currently none shown; CV has a home address — not used)
 - [ ] Trainee consent: set `consent: true` in people.yaml only after each person agrees
