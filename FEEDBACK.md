@@ -62,3 +62,7 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 
 ## Round 8 (2026-10-01)
 1. Team: bio text now starts level with the top of the photo (removed the first paragraph's top margin).
+
+## Round 9 (2026-10-01)
+1. Bio: "vision research with Anand Swaroop at the National Eye Institute", with his name linked to his NIH IRP page (https://irp.nih.gov/pi/anand-swaroop; PI-specified, page verified). Bio now supports [text](url) links.
+2. Affiliation under the photo: Staff Scientist / Neurobiology, Neurodegeneration & Repair Laboratory / National Eye Institute, National Institutes of Health (affiliation is now a list in site.yaml).

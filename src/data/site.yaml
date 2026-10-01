@@ -25,10 +25,12 @@ welcome: >-
 pi:
   name: Soumitra Pal
   title: Staff Scientist
-  affiliation: National Eye Institute, National Institutes of Health
+  affiliation:            # one line each, shown under the title
+    - Neurobiology, Neurodegeneration & Repair Laboratory
+    - National Eye Institute, National Institutes of Health
   photo: /images/pi.jpg   # 800 px; /images/pi-480.jpg used for normal screens
   bio: |
-    Soumitra Pal is a computational biologist and computer scientist interested in how cellular states are established, maintained, and changed. He trained in algorithms and high-performance computing, earning a PhD in computer science at IIT Bombay and working at Texas Instruments, IBM Research, and the University of Connecticut, before moving into computational genomics at NCBI and then vision research at the National Eye Institute.
+    Soumitra Pal is a computational biologist and computer scientist interested in how cellular states are established, maintained, and changed. He trained in algorithms and high-performance computing, earning a PhD in computer science at IIT Bombay and working at Texas Instruments, IBM Research, and the University of Connecticut, before moving into computational genomics at NCBI and then vision research with [Anand Swaroop](https://irp.nih.gov/pi/anand-swaroop) at the National Eye Institute.
 
     His work has spanned single-cell atlases, gene regulation, development, aging, and evolution. He has studied how cell types differ between sexes and across species, how gene-expression programs adapt during evolution, and how photoreceptor identity emerges and is maintained. Throughout, he has built computational methods in close partnership with experimentalists, drawing on mouse retina, single-cell and bulk transcriptomics, and comparative genomics across more than a hundred species. These threads point toward one question: how can we move from describing cellular states to understanding how they change?
 

@@ -4,6 +4,13 @@ import { site, trainees } from '../../lib/data';
 const pi = site.pi;
 const linkLabels: Record<string, string> = { cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub', linkedin: 'LinkedIn' };
 const links = Object.entries(pi.links ?? {}).filter(([, v]) => v);
+const affiliation = ([] as string[]).concat(pi.affiliation ?? []).filter(Boolean);
+// bio paragraphs; [text](https://url) becomes a link
+const bioParas = (pi.bio ?? '').trim().split(/\n\s*\n/).filter(Boolean).map((para) =>
+  para.replace(/\s+/g, ' ').split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/).map((seg) => {
+    const m = seg.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+    return m ? { text: m[1], href: m[2] } : { text: seg };
+  }));
 ---
 <Section id="team" title="Team">
   <div class="team-grid">
@@ -13,10 +20,10 @@ const links = Object.entries(pi.links ?? {}).filter(([, v]) => v);
         : <div class="photo-ph" role="img" aria-label="Photo to be added">{pi.name.split(' ').map((w) => w[0]).join('')}</div>}
       <h3>{pi.name}</h3>
       {pi.title && <p class="smallcaps">{pi.title}</p>}
-      {pi.affiliation && <p class="aff">{pi.affiliation}</p>}
+      {affiliation.length > 0 && <p class="aff">{affiliation.map((l, i) => <Fragment>{i > 0 && <br />}{l}</Fragment>)}</p>}
     </article>
     <div class="pi-bio">
-      {pi.bio ? pi.bio.trim().split(/\n\s*\n/).map((para) => <p>{para.replace(/\s+/g, ' ')}</p>) : <p class="placeholder">Short bio to be added.</p>}
+      {bioParas.length ? bioParas.map((segs) => <p>{segs.map((s) => (s.href ? <a href={s.href}>{s.text}</a> : s.text))}</p>) : <p class="placeholder">Short bio to be added.</p>}
       {links.length > 0 && (
         <ul class="pills">{links.map(([k, v]) => <li><a class="pill" href={v}>{linkLabels[k] ?? k}</a></li>)}</ul>
       )}

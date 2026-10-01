@@ -20,7 +20,7 @@ const ok = (s) => [200, 301, 302, 303, 307, 308].includes(s);
 const urls = new Map(); // url -> kind
 for (const f of fs.readdirSync('src/data')) {
   const txt = fs.readFileSync(`src/data/${f}`, 'utf8');
-  for (const m of txt.matchAll(/https?:\/\/[^\s"'<>,}]+/g)) urls.set(m[0], f);
+  for (const m of txt.matchAll(/https?:\/\/[^\s"'<>,})]+/g)) urls.set(m[0], f);
   for (const m of txt.matchAll(/\b(?:doi|paper_doi):\s*"?(10\.[^\s",}]+)"?/g)) urls.set(`https://doi.org/${m[1]}`, f);
 }
 let bad = 0; const passedDoi = new Set(), passedUrl = new Set();

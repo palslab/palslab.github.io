@@ -13,7 +13,7 @@ function load<T>(file: string): T {
 
 export interface Site {
   lab_name: string; subtitle: string; sections?: Record<string, boolean>; tagline: string; site_url: string; welcome: string;
-  pi: { name: string; title: string; affiliation: string; photo: string; bio: string; email: string;
+  pi: { name: string; title: string; affiliation: string | string[]; photo: string; bio: string; email: string;
         links: Record<string, string> };
   contact: { email: string; address: string[] };
   funding: string; disclaimer: string;
