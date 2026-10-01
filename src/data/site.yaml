@@ -41,11 +41,11 @@ pi:
     He has developed tools including EvoGeneX, PINNOU, Co-SELECT, and JUDI, contributed to collaborative efforts such as the Fly Cell Atlas, and mentored trainees from high school through graduate school. Across all of it he follows one principle: useful computational biology should make predictions that biology can prove wrong.
   email: soumitra.pal@nih.gov
   links:                 # only verified URLs; blank = hidden (see TODO.md)
-    cv: ""
-    scholar: ""
-    orcid: ""
+    cv: /cv.pdf            # public copy, address and phone redacted (round 14)
+    scholar: https://scholar.google.com/citations?user=6dnFbTkAAAAJ
+    orcid: https://orcid.org/0000-0003-4840-3944
     github: https://github.com/soumitrakp
-    linkedin: ""
+    linkedin: https://www.linkedin.com/in/soumitra-pal-0b2b871/
 
 contact:
   email: soumitra.pal@nih.gov

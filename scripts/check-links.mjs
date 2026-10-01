@@ -16,6 +16,8 @@ async function status(u) {
   } catch (e) { return `ERR ${e.cause?.code ?? e.name}`; }
 }
 const ok = (s) => [200, 301, 302, 303, 307, 308].includes(s);
+// Sites that refuse all automated requests (e.g. LinkedIn returns 999). Reported as SKIP, not FAIL.
+const SKIP_HOSTS = ['linkedin.com'];
 
 const urls = new Map(); // url -> kind
 for (const f of fs.readdirSync('src/data')) {
@@ -26,6 +28,7 @@ for (const f of fs.readdirSync('src/data')) {
 let bad = 0; const passedDoi = new Set(), passedUrl = new Set();
 for (const [u, f] of urls) {
   if (u.includes('palslab.github.io')) continue;
+  if (SKIP_HOSTS.some((h) => new URL(u).hostname.endsWith(h))) { console.log(`SKIP blocks automated checks ${u}  (${f})`); continue; }
   const s = await status(u);
   console.log(`${ok(s) ? 'OK  ' : 'FAIL'} ${s} ${u}  (${f})`);
   if (!ok(s)) { bad++; continue; }

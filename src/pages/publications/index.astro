@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PubItem from '../../components/PubItem.astro';
-import { publications, type Publication } from '../../lib/data';
+import { publications, site, type Publication } from '../../lib/data';
 
 const groups: { key: Publication['type']; label: string }[] = [
   { key: 'journal', label: 'Journal articles' },
@@ -20,6 +20,7 @@ const byYear = (list: Publication[]) => {
   <section class="section">
     <div class="container">
       <h1 class="section-title">Publications</h1>
+      {site.pi.links?.scholar && <p class="scholar">Also on <a href={site.pi.links.scholar}>Google Scholar</a>, with citation counts.</p>}
       <p class="legend">PI in bold; † co-first author; * corresponding author</p>
       <form class="filters" role="search" onsubmit="return false">
         <label>Year
@@ -81,4 +82,5 @@ const byYear = (list: Publication[]) => {
   .pub-group h2 { font-size: 1.3rem; color: var(--accent); margin: 40px 0 0; }
   .year-group h3 { font-size: 1rem; color: var(--muted); margin: 20px 0 0; }
   .legend { color: var(--muted); font-size: 0.9rem; }
+  .scholar { margin: 0 0 6px; font-weight: 600; }
 </style>
