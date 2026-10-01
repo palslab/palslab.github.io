@@ -91,3 +91,5 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 
 ## Round 16 — old Google Site (2026-10-01)
 - sites.google.com/site/soumitrakp turned into a signpost (PI edited and published; Claude checked the draft and the live result): one Home page, "Soumitra Pal's research website has moved to the Pal Lab website." + button to https://palslab.github.io/. Unpublished CellVerse draft discarded and other pages removed at the PI's choice. No further maintenance needed.
+## Round 17 (2026-10-01)
+1. Attribution note now spans the full content width on Research and Publications.
