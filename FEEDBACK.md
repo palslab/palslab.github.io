@@ -25,3 +25,10 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 ## Round 2 (2026-10-01)
 1. Fly Cell Atlas title → "single-nucleus" (as published), corrected in publications.yaml.
 2. people.yaml (trainee names, consent: false) stays in the repo, as is.
+
+## Phase 3 — Design pass (2026-10-01)
+- Original generated hero art (src/lib/manifold.ts): cell-state surface with a healthy basin, a departing trajectory and a dashed restoring path; deterministic, no external images.
+- Two palettes (A rod indigo + copper; B visual purple + amber) and two hero layouts (A colour band; B white with wide art), switchable in site.yaml `design:`. Default A/A until the PI chooses. Comparison: review/phase-3/compare-AB.png.
+- Removed template chrome (hero eyebrow, middle-dot joins, arrow in "All news").
+- Lighthouse (mobile + desktop, home + publications): accessibility 100, performance 100, best practices 100, SEO 100; B/B accessibility 100. Fixed font-swap layout shift (CLS 0.66 → 0) with font preload and metric-matched fallback.
+- Keyboard order verified: skip link → nav → hero actions. All text colour pairs ≥ 5.3:1.

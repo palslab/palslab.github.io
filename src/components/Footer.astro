@@ -4,7 +4,7 @@ const year = new Date().getFullYear();
 ---
 <footer class="site-footer">
   <div class="container">
-    <p><strong>{site.lab_name}</strong> · {site.subtitle}</p>
+    <p><strong>{site.lab_name}</strong>, {site.subtitle}</p>
     {site.funding && <p>{site.funding}</p>}
     {site.disclaimer && <p class="disclaimer">{site.disclaimer}</p>}
     <p>© {year} {site.pi.name}</p>

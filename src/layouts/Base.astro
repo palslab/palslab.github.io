@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/source-sans-3';
+import fontUrl from '@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2?url';
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
@@ -7,11 +8,11 @@ import { site } from '../lib/data';
 
 interface Props { title?: string; description?: string }
 const { title, description = site.welcome } = Astro.props;
-const fullTitle = title ? `${title} · ${site.lab_name}` : `${site.lab_name} · ${site.subtitle}`;
+const fullTitle = title ? `${title} | ${site.lab_name}` : `${site.lab_name} | ${site.subtitle}`;
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-palette={(site.design?.palette ?? "A").toLowerCase()}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +20,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="description" content={description.trim()} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href={fontUrl} as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description.trim()} />
     <meta property="og:url" content={canonical} />
