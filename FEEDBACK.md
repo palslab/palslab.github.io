@@ -42,3 +42,8 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 ## Round 4 (2026-10-01)
 1. PI: drop "Grounding virtual cells" from the hero for now; use a generic lab identity → hero headline is the lab name "Pal Lab", sub-line "Computational biology, led by Soumitra Pal" (site.yaml tagline).
 2. Welcome paragraph rewritten from published work only (expression evolution, single-cell atlases, photoreceptor development/aging; stochastic models, PINNs, algorithms). The virtual-cell vision remains only as the "Predictive models of cell state" research theme. CLAUDE.md §4 note updated.
+
+## Phase 4 — Publish (2026-10-01)
+- PI created the free GitHub organization `palslab`; authorized GitHub CLI (device login) for this session.
+- Created public repo palslab/palslab.github.io, pushed main, Pages source = GitHub Actions. Deploy runs (push + manual) succeeded; draft check passed in CI.
+- Live: https://palslab.github.io — home and publications verified live (correct hero, sections, no draft terms); all internal links/anchors resolve; all clickable external links verified (5 DOIs, 6 GitHub URLs).

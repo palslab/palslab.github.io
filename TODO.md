@@ -5,7 +5,7 @@ Unverified links and missing assets. Remove items once resolved.
 ## Verify links (run on your Mac)
 
 doi.org and Crossref rate-limited / blocked the build sandbox on 2026-10-01, so these render **without** links.
-From the project folder in Terminal: `node scripts/check-links.mjs --write` checks every URL and marks passing DOIs as verified; then rebuild.
+Needs Node.js, which this Mac does not have: ask Claude to run `node scripts/check-links.mjs --write` (it marks passing DOIs as verified), then rebuild and push.
 
 Unverified DOIs (22):
 
@@ -51,3 +51,8 @@ Unverified URLs:
 - [ ] CV PDF for the public site (a version without home address/phone) → `public/cv.pdf`, then `pi.links.cv: /cv.pdf`
 - [ ] Mailing address (currently none shown; CV has a home address — not used)
 - [ ] Trainee consent: set `consent: true` in people.yaml only after each person agrees
+
+## After publishing
+- [ ] Add https://palslab.github.io to GitHub profile, Google Scholar, ORCID, LinkedIn and the CV header
+- [ ] Turn the old Google Site into a signpost to the new site (PLAYBOOK step 7)
+- [ ] Optional: revoke the session's GitHub CLI authorization when done (GitHub → Settings → Applications → Authorized OAuth Apps → GitHub CLI)
