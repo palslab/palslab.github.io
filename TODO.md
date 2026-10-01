@@ -18,7 +18,7 @@ All 27 DOIs and all data URLs verified on 2026-10-01 by the "Check links" workfl
 
 ## After publishing
 - [x] Old Google Site is now a signpost to the new site (done 2026-10-01)
-- [ ] Update the CV header: replace sites.google.com/site/soumitrakp with palslab.github.io (then ask Claude to re-make the public CV)
+- [x] CV header updated to palslab.github.io; public CV re-made from V9 (2026-10-01)
 - [ ] Update the homepage field on Google Scholar to palslab.github.io
 - [ ] Add https://palslab.github.io to GitHub profile, Google Scholar, ORCID, LinkedIn and the CV header
 - [ ] Optional: revoke the session's GitHub CLI authorization when done (GitHub → Settings → Applications → Authorized OAuth Apps → GitHub CLI)

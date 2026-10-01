@@ -97,3 +97,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 ## Round 18 (2026-10-01)
 1. Mentoring statement now spans the full width.
 2. "Trainees mentored" moved from Team to Mentoring & Outreach (Team = current lab only). check:drafts now guards the trainee list in its new place.
+
+## Round 19 (2026-10-01)
+1. Public CV replaced with V9 (header now palslab.github.io), address and phone redacted as before.
