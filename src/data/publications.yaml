@@ -44,6 +44,7 @@
   venue: Research Square
   year: 2026
   doi: 10.21203/rs.3.rs-10144266/v1
+  doi_verified: true
   type: preprint
   roles: { co_first: [Soumitra Pal, Noor D. White Carreiro], corresponding: [Soumitra Pal, Anand Swaroop] }
   status: under-review
@@ -89,6 +90,7 @@
   venue: "Aging Cell, e70001"
   year: 2025
   doi: 10.1111/acel.70001
+  doi_verified: true
   type: journal
   roles: { co_first: [Laura Campello, Matthew Brooks], corresponding: [Anand Swaroop] }
   status: published
@@ -98,6 +100,7 @@
   venue: "Cell Systems 16(1)"
   year: 2025
   doi: 10.1016/j.cels.2024.11.013
+  doi_verified: true
   type: journal
   roles: { corresponding: [Chi-Ping Day, Teresa M. Przytycka] }
   status: published
@@ -107,6 +110,7 @@
   venue: eLife
   year: 2024
   doi: 10.7554/eLife.101641
+  doi_verified: true
   type: journal
   roles: { co_first: [Sharvani Mahadevaraju, Soumitra Pal], corresponding: [Sharvani Mahadevaraju, Soumitra Pal, Brian Oliver] }
   status: published
@@ -128,6 +132,7 @@
   venue: "eLife 12: e82201"
   year: 2023
   doi: 10.7554/eLife.82201
+  doi_verified: true
   type: journal
   roles: { co_first: [Amelie Raz, Gabriela Vida, Sarah Stern, Sharvani Mahadevaraju, Jaclyn Fingerhut, Jennifer Viveiros, Soumitra Pal, Jasmine Grey, Mara Grace], corresponding: [Stephen DiNardo, Margaret T. Fuller] }
   status: published
@@ -148,6 +153,7 @@
   venue: "Science 375(6584): eabk2432"
   year: 2022
   doi: 10.1126/science.abk2432
+  doi_verified: true
   type: journal
   status: published
 - id: jpdc-2020-hybriddca
@@ -156,6 +162,7 @@
   venue: "Journal of Parallel and Distributed Computing 143: 47–66"
   year: 2020
   doi: 10.1016/j.jpdc.2020.04.002
+  doi_verified: true
   type: journal
   status: published
 - id: bioinf-2020-judi
@@ -164,6 +171,7 @@
   venue: "Bioinformatics 36(8): 2572–2574"
   year: 2020
   doi: 10.1093/bioinformatics/btz956
+  doi_verified: true
   type: journal
   status: published
 - id: bioinf-2019-msc
@@ -172,6 +180,7 @@
   venue: "Bioinformatics 35(17): 2932–2940"
   year: 2019
   doi: 10.1093/bioinformatics/bty1071
+  doi_verified: true
   type: journal
   status: published
 - id: nar-2019-coselect
@@ -180,6 +189,7 @@
   venue: "Nucleic Acids Research 47(13): 6632–6641"
   year: 2019
   doi: 10.1093/nar/gkz540
+  doi_verified: true
   type: journal
   status: published
   selected: true
@@ -189,6 +199,7 @@
   venue: "International Journal of Data Mining and Bioinformatics 18(2): 105–124"
   year: 2017
   doi: 10.1504/IJDMB.2017.086457
+  doi_verified: true
   type: journal
   status: published
 - id: bmcgen-2016-edm
@@ -197,6 +208,7 @@
   venue: "BMC Genomics 17: 465"
   year: 2016
   doi: 10.1186/s12864-016-2789-9
+  doi_verified: true
   type: journal
   status: published
 - id: bioinf-2016-kcmbt
@@ -205,6 +217,7 @@
   venue: "Bioinformatics 32(18): 2783–2790"
   year: 2016
   doi: 10.1093/bioinformatics/btw345
+  doi_verified: true
   type: journal
   status: published
 - id: bmcbioinf-2015-perfect
@@ -213,6 +226,7 @@
   venue: "BMC Bioinformatics 16(Suppl 17): S7"
   year: 2015
   doi: 10.1186/1471-2105-16-S17-S7
+  doi_verified: true
   type: journal
   status: published
 - id: dam-2015-coloring
@@ -221,6 +235,7 @@
   venue: "Discrete Applied Mathematics 193: 110–118"
   year: 2015
   doi: 10.1016/j.dam.2015.04.014
+  doi_verified: true
   type: journal
   status: published
 - id: jpdc-2012-lighttrails
@@ -229,17 +244,18 @@
   venue: "Journal of Parallel and Distributed Computing 72(10): 1226–1236"
   year: 2012
   doi: 10.1016/j.jpdc.2012.05.010
+  doi_verified: true
   type: journal
   status: published
 
 # ---------- Refereed conference papers ----------
-- { id: hpcc-2016-svd, authors: [Soumitra Pal, Sudipta Pathak, Sanguthevar Rajasekaran], title: "On Speeding-up Parallel Jacobi Iterations for SVDs", venue: "IEEE HPCC 2016, Sydney, pp. 9–16", year: 2016, doi: 10.1109/HPCC-SmartCity-DSS.2016.0013, type: conference, status: published }
-- { id: bibm-2016-qpms10, authors: [Peng Xiao, Soumitra Pal, Sanguthevar Rajasekaran], title: "qPMS10: A Randomized Algorithm for Efficiently Solving Quorum Planted Motif Search Problem", venue: "IEEE BIBM 2016, Shenzhen, pp. 670–675", year: 2016, doi: 10.1109/BIBM.2016.7822598, type: conference, status: published }
-- { id: bibm-2015-ems2, authors: [Soumitra Pal, Sanguthevar Rajasekaran], title: "Improved Algorithms for Finding Edit Distance Based Motifs", venue: "IEEE BIBM 2015, Washington DC, pp. 537–542", year: 2015, doi: 10.1109/BIBM.2015.7359740, type: conference, status: published }
-- { id: iccabs-2015-kmer, authors: [Abdullah-Al Mamun, Soumitra Pal, Sanguthevar Rajasekaran], title: "Efficient techniques for k-mer counting", venue: "IEEE ICCABS 2015, Miami, FL", year: 2015, doi: 10.1109/ICCABS.2015.7344733, type: conference, status: published }
-- { id: iccabs-2014-perfect, authors: [Soumitra Pal, Srinivas Aluru], title: "In Search of Perfect Reads", venue: "IEEE ICCABS 2014, Miami, FL, pp. 1–2", year: 2014, doi: 10.1109/ICCABS.2014.6863919, type: conference, status: published }
-- { id: eenergy-2013-meter, authors: [Vijay Arya, T. S. Jayram, Soumitra Pal, Shivkumar Kalyanaraman], title: "Inferring Connectivity Model from Meter Measurements in Distribution Networks", venue: "ACM International Conference on Future Energy Systems (e-Energy), pp. 173–182", year: 2013, doi: 10.1145/2487166.2487186, type: conference, status: published }
-- { id: adcom-2009-lighttrails, authors: [Soumitra Pal, Abhiram Ranade], title: "Scheduling Light-trails on WDM Rings", venue: "International Conference on Advanced Computing and Communications (ADCOM)", year: 2009, url: "https://arxiv.org/abs/1112.6254", type: conference, status: published }
-- { id: nips-2011-sparse, authors: [T. S. Jayram, Soumitra Pal, Vijay Arya], title: "Recovery of a Sparse Integer Solution to an Underdetermined System of Linear Equations", venue: "NIPS Workshop on Sparse Representation and Low-rank Approximation, Granada", year: 2011, url: "https://arxiv.org/abs/1112.1757", type: conference, status: published }
+- { id: hpcc-2016-svd, authors: [Soumitra Pal, Sudipta Pathak, Sanguthevar Rajasekaran], title: "On Speeding-up Parallel Jacobi Iterations for SVDs", venue: "IEEE HPCC 2016, Sydney, pp. 9–16", year: 2016, doi: 10.1109/HPCC-SmartCity-DSS.2016.0013, doi_verified: true, type: conference, status: published }
+- { id: bibm-2016-qpms10, authors: [Peng Xiao, Soumitra Pal, Sanguthevar Rajasekaran], title: "qPMS10: A Randomized Algorithm for Efficiently Solving Quorum Planted Motif Search Problem", venue: "IEEE BIBM 2016, Shenzhen, pp. 670–675", year: 2016, doi: 10.1109/BIBM.2016.7822598, doi_verified: true, type: conference, status: published }
+- { id: bibm-2015-ems2, authors: [Soumitra Pal, Sanguthevar Rajasekaran], title: "Improved Algorithms for Finding Edit Distance Based Motifs", venue: "IEEE BIBM 2015, Washington DC, pp. 537–542", year: 2015, doi: 10.1109/BIBM.2015.7359740, doi_verified: true, type: conference, status: published }
+- { id: iccabs-2015-kmer, authors: [Abdullah-Al Mamun, Soumitra Pal, Sanguthevar Rajasekaran], title: "Efficient techniques for k-mer counting", venue: "IEEE ICCABS 2015, Miami, FL", year: 2015, doi: 10.1109/ICCABS.2015.7344733, doi_verified: true, type: conference, status: published }
+- { id: iccabs-2014-perfect, authors: [Soumitra Pal, Srinivas Aluru], title: "In Search of Perfect Reads", venue: "IEEE ICCABS 2014, Miami, FL, pp. 1–2", year: 2014, doi: 10.1109/ICCABS.2014.6863919, doi_verified: true, type: conference, status: published }
+- { id: eenergy-2013-meter, authors: [Vijay Arya, T. S. Jayram, Soumitra Pal, Shivkumar Kalyanaraman], title: "Inferring Connectivity Model from Meter Measurements in Distribution Networks", venue: "ACM International Conference on Future Energy Systems (e-Energy), pp. 173–182", year: 2013, doi: 10.1145/2487166.2487186, doi_verified: true, type: conference, status: published }
+- { id: adcom-2009-lighttrails, authors: [Soumitra Pal, Abhiram Ranade], title: "Scheduling Light-trails on WDM Rings", venue: "International Conference on Advanced Computing and Communications (ADCOM)", year: 2009, url: "https://arxiv.org/abs/1112.6254", url_verified: true, type: conference, status: published }
+- { id: nips-2011-sparse, authors: [T. S. Jayram, Soumitra Pal, Vijay Arya], title: "Recovery of a Sparse Integer Solution to an Underdetermined System of Linear Equations", venue: "NIPS Workshop on Sparse Representation and Low-rank Approximation, Granada", year: 2011, url: "https://arxiv.org/abs/1112.1757", url_verified: true, type: conference, status: published }
 - { id: gspx-2004-hindsight, authors: [Soumitra Pal, Ish Dham, Tor E. Jeremiassen], title: "Design and Validation Techniques to Implement a Robust Hindsight Feature on ISA Simulators", venue: "Global Signal Processing Expo and Conference (GSPx), Santa Clara", year: 2004, type: conference, status: published }
 - { id: gspx-2004-saverestore, authors: [Soumitra Pal, Prem Kumar Vadapalli], title: "A methodology for Saving and Restoring the State of ISA simulators", venue: "Global Signal Processing Expo and Conference (GSPx), Santa Clara", year: 2004, type: conference, status: published }
