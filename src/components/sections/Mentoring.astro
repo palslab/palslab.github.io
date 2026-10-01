@@ -1,6 +1,6 @@
 ---
 import Section from '../Section.astro';
-import { mentoring } from '../../lib/data';
+import { mentoring, trainees } from '../../lib/data';
 const groups = [
   ['Programs', mentoring.programs],
   ['Judging', mentoring.judging],
@@ -9,10 +9,20 @@ const groups = [
 ] as const;
 ---
 <Section id="mentoring" title="Mentoring & Outreach">
-  {mentoring.philosophy ? <p class="lead">{mentoring.philosophy}</p> : <p class="placeholder">Mentoring philosophy to be added.</p>}
+  {mentoring.philosophy ? <p class="lead philosophy">{mentoring.philosophy}</p> : <p class="placeholder">Mentoring philosophy to be added.</p>}
   <div class="grid grid-3">
     {groups.filter(([, l]) => l && l.length).map(([h, l]) => (
       <div><h3 class="smallcaps">{h}</h3><ul>{l.map((x) => <li>{x}</li>)}</ul></div>
     ))}
   </div>
+  <div class="trainees-block">
+    <h3 class="smallcaps">Trainees mentored</h3>
+    {trainees.length
+      ? <ul class="trainees">{trainees.map((t) => <li><strong>{t.name}</strong>{t.program && ` — ${t.program}`}{t.years && ` (${t.years})`}{t.now && `. Now: ${t.now}`}</li>)}</ul>
+      : <p class="placeholder">Listed with each trainee's permission.</p>}
+  </div>
 </Section>
+<style>
+  .philosophy { max-width: none; }
+  .trainees-block { margin-top: 36px; }
+</style>

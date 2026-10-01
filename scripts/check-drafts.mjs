@@ -40,13 +40,14 @@ for (const p of load('publications.yaml'))
   if (p.show === false || p.status === 'in-preparation') banned.push([p.title, `hidden publication ${p.id}`]);
 for (const t of load('research.yaml'))
   if (t.status === 'draft') banned.push([t.theme, `draft theme ${t.id}`]);
-// Trainees without consent must not be listed in the Team section. (Their names may
-// legitimately appear as co-authors in publications, so only the Team section is scanned.)
+// Trainees without consent must not be listed in the Mentoring section's trainee list. (Their names
+// may legitimately appear as co-authors in publications, so only that list is scanned.)
 const home = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
-const team = home.slice(home.indexOf('id="team"'), home.indexOf('id="contact"'));
+const tStart = home.indexOf('Trainees mentored');
+const team = tStart < 0 ? '' : home.slice(tStart, home.indexOf('</section>', tStart));
 let fail = 0;
 for (const t of load('people.yaml'))
-  if (t.consent !== true && team.includes(t.name)) { console.error(`LEAK: trainee without consent "${t.name}" in Team section`); fail++; }
+  if (t.consent !== true && team.includes(t.name)) { console.error(`LEAK: trainee without consent "${t.name}" in trainee list`); fail++; }
   else if (t.photo_consent !== true && t.photo && home.includes(t.photo)) { console.error(`LEAK: photo without consent for "${t.name}"`); fail++; }
 
 for (const [needle, why] of banned) {

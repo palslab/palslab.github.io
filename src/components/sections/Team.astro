@@ -1,6 +1,6 @@
 ---
 import Section from '../Section.astro';
-import { site, trainees } from '../../lib/data';
+import { site } from '../../lib/data';
 const pi = site.pi;
 const linkLabels: Record<string, string> = { cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub', linkedin: 'LinkedIn' };
 const links = Object.entries(pi.links ?? {}).filter(([, v]) => v);
@@ -29,10 +29,6 @@ const bioParas = (pi.bio ?? '').trim().split(/\n\s*\n/).filter(Boolean).map((par
       )}
     </div>
   </div>
-  <h3 class="smallcaps trainees-h">Trainees mentored</h3>
-  {trainees.length
-    ? <ul class="trainees">{trainees.map((t) => <li><strong>{t.name}</strong>{t.program && ` — ${t.program}`}{t.years && ` (${t.years})`}{t.now && `. Now: ${t.now}`}</li>)}</ul>
-    : <p class="placeholder">Listed with each trainee's permission.</p>}
 </Section>
 <style>
   .team-grid { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; }
@@ -42,7 +38,6 @@ const bioParas = (pi.bio ?? '').trim().split(/\n\s*\n/).filter(Boolean).map((par
   .person h3 { margin: 14px 0 2px; }
   .person .smallcaps { margin: 0; }
   .aff { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
-  .trainees-h { margin-top: 40px; }
   .pi-bio p { margin: 0 0 1em; }
   /* pull the first line up by its half-leading so the letters, not the line box, align with the photo's top edge */
   .pi-bio > :first-child { margin-top: -0.4em; }
