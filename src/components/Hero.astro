@@ -7,7 +7,8 @@ const f = (n: number) => +n.toFixed(1);
 <section class="hero" aria-labelledby="hero-h">
   <div class="container">
     <div class="hero-text">
-      <h1 id="hero-h" class="hero-tagline">{site.tagline}</h1>
+      <h1 id="hero-h" class="hero-tagline">{site.lab_name}</h1>
+      <p class="hero-sub">{site.tagline}</p>
       <p class="hero-welcome">{site.welcome}</p>
       <p class="hero-actions">
         <a class="button" href="#research">See our research</a>
@@ -26,6 +27,7 @@ const f = (n: number) => +n.toFixed(1);
   .hero .container { width: 100%; position: relative; z-index: 1; }
   .hero-text { max-width: 520px; padding: 72px 0; }
   .hero-tagline { color: var(--accent); font-size: clamp(2.3rem, 4.6vw, 3.5rem); line-height: 1.06; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 24px; }
+  .hero-sub { font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 600; color: var(--ink); margin: -8px 0 22px; }
   .hero-welcome { font-size: 1.15rem; line-height: 1.65; color: var(--body); margin: 0 0 30px; }
   .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin: 0; }
   .hero-link { font-weight: 600; text-decoration: none; }

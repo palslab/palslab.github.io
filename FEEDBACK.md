@@ -38,3 +38,7 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 2. PI liked layouts C and E but not their colours → eight new palettes (C1–C4, E1–E4), all ≥ WCAG AA: review/phase-3/palettes/.
 3. PI chose C2 → applied site-wide: retinal-mosaic hero (src/lib/mosaic.ts, replaces the manifold art and the A/B switch), cobalt #1d3f8f + saffron #e09b1a, links #8f5b00, IBM Plex Sans self-hosted, tagline in sentence case. CLAUDE.md §4 updated with these decisions.
    Lighthouse (home, publications, news; mobile and desktop): 100 accessibility, performance, best practices, SEO. Screenshots: review/phase-3/final-C2/.
+
+## Round 4 (2026-10-01)
+1. PI: drop "Grounding virtual cells" from the hero for now; use a generic lab identity → hero headline is the lab name "Pal Lab", sub-line "Computational biology, led by Soumitra Pal" (site.yaml tagline).
+2. Welcome paragraph rewritten from published work only (expression evolution, single-cell atlases, photoreceptor development/aging; stochastic models, PINNs, algorithms). The virtual-cell vision remains only as the "Predictive models of cell state" research theme. CLAUDE.md §4 note updated.

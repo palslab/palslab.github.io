@@ -4,15 +4,18 @@
 # ---------------------------------------------------------------------------
 lab_name: Pal Lab
 subtitle: Computational Biology
-tagline: Grounding virtual cells
+# Hero: the lab name is the headline; this line sits under it. Keep it direction-neutral
+# until the new research direction is preprinted.
+tagline: Computational biology, led by Soumitra Pal
 site_url: https://palslab.github.io
 
 
-# Hero welcome (vision level only — no aims, no results)
+# Hero welcome — based on published work only
 welcome: >-
-  We build predictive, experimentally grounded models of cell state: models that
-  represent a cell's molecular state, detect its departure from health, and predict
-  the interventions that restore it. Photoreceptors are our first system.
+  We use computation to understand how cells are organized, how their gene expression
+  evolves, and how they fail: from expression evolution across species and single-cell
+  atlases to the development and aging of photoreceptors. Our tools range from
+  stochastic process models and physics-informed neural networks to scalable algorithms.
 
 pi:
   name: Soumitra Pal
