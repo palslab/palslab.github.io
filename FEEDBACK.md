@@ -56,3 +56,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 
 ## Round 6 (2026-10-01)
 1. Mentoring philosophy: removed the future-lab sentence ("In the lab, each trainee will start from tested, shared code and data…").
+
+## Round 7 (2026-10-01)
+1. Team bio replaced with the PI's text, edited: typo fixed; unpublished-work claims (retinal disease, chromatin profiling, organoids, "open" PINNOU) removed; the predictive-program paragraph softened to one sentence and merged into paragraph 2 (PI choice). Bio now renders as separate paragraphs.

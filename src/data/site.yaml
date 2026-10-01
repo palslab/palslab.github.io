@@ -27,15 +27,12 @@ pi:
   title: Staff Scientist
   affiliation: National Eye Institute, National Institutes of Health
   photo: /images/pi.jpg   # 800 px; /images/pi-480.jpg used for normal screens
-  bio: >-
-    Soumitra Pal is a computational biologist trained in computer science (B.E., IIEST
-    Shibpur; M.Tech. and Ph.D., IIT Bombay). After designing DSP simulators at Texas
-    Instruments, he moved into bioinformatics: parallel and randomized algorithms for
-    sequence analysis at IIT Bombay and the University of Connecticut, then five years
-    with Teresa Przytycka at NCBI on DNA shape in transcription-factor binding,
-    gene-expression evolution and the Fly Cell Atlas. He now works with Anand Swaroop
-    on retinal development, aging and evolution, using bulk and single-cell expression
-    data from more than 100 species.
+  bio: |
+    Soumitra Pal is a computational biologist and computer scientist interested in how cellular states are established, maintained, and changed. He trained in algorithms and high-performance computing, earning a PhD in computer science at IIT Bombay and working at Texas Instruments, IBM Research, and the University of Connecticut, before moving into computational genomics at NCBI and then vision research at the National Eye Institute.
+
+    His work has spanned single-cell atlases, gene regulation, development, aging, and evolution. He has studied how cell types differ between sexes and across species, how gene-expression programs adapt during evolution, and how photoreceptor identity emerges and is maintained. Throughout, he has built computational methods in close partnership with experimentalists, drawing on mouse retina, single-cell and bulk transcriptomics, and comparative genomics across more than a hundred species. These threads point toward one question: how can we move from describing cellular states to understanding how they change?
+
+    He has developed tools including EvoGeneX, PINNOU, Co-SELECT, and JUDI, contributed to collaborative efforts such as the Fly Cell Atlas, and mentored trainees from high school through graduate school. Across all of it he follows one principle: useful computational biology should make predictions that biology can prove wrong.
   email: soumitra.pal@nih.gov
   links:                 # only verified URLs; blank = hidden (see TODO.md)
     cv: ""
