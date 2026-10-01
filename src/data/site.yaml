@@ -9,6 +9,9 @@ subtitle: Computational Biology
 tagline: Led by Soumitra Pal | Computational Biology of Cell Identity and Change
 site_url: https://palslab.github.io
 
+# Hero artwork: "concept" (lab concept illustration, public/images/lab-concept-*.webp) or "mosaic" (generated retina mosaic)
+hero_art: concept
+
 # Home-page sections that can be hidden (true = shown). Hidden sections also drop out of the nav.
 sections:
   approach: false   # hidden until the approach is published (PI, round 5)

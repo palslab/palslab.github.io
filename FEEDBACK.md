@@ -72,3 +72,7 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 
 ## Round 11 (2026-10-01)
 1. Split "Algorithms and high-performance computing" into "Algorithms for sequence analysis" (edit-distance motifs, quorum PMS, KCMBT, perfect reads, MSC) and "Algorithms, optimization and parallel computing" (PhD light-trails JPDC 2012, fragmented colouring DAM 2015, IBM e-Energy 2013 meter connectivity, NIPS-workshop sparse integer recovery, parallel Jacobi SVD HPCC 2016, Hybrid-DCA JPDC 2020). Both placed last in Research. KCMBT/qPMS papers listed (cards stay hidden).
+
+## Round 12 (2026-10-01)
+1. Hero art: replaced the generated mosaic with the PI's lab concept illustration (source/lab_concept_figure.png → public/images/lab-concept-{960,1440,2172}.webp, 49–171 KB; phone crop lab-concept-m-900.webp showing the cell-state space and retina). Layout: hero text in two columns, illustration as a full-width band below with soft edges; descriptive alt text. Switch back with `hero_art: mosaic` in site.yaml.
+   Lighthouse home: mobile 99/100/100/100 (LCP 2.1 s), desktop 100 across; CLS 0.
