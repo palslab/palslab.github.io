@@ -53,3 +53,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 2. Hide research theme "Predictive models of cell state and dysfunction" → `status: draft` in research.yaml (also guarded by check:drafts).
 3. Hide KCMBT and qPMS10 software cards → `show: false` in software.yaml (their papers stay on the Publications page).
 4. Hide Join Us → `sections.join: false` (section, nav item and the hero "Join the lab" link removed).
+
+## Round 6 (2026-10-01)
+1. Mentoring philosophy: removed the future-lab sentence ("In the lab, each trainee will start from tested, shared code and data…").
