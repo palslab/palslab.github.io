@@ -69,3 +69,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 
 ## Round 10 (2026-10-01)
 1. Hero sub-line → "Led by Soumitra Pal | Computational Biology of Cell Identity and Change"; welcome paragraph replaced with the PI's text (verbatim).
+
+## Round 11 (2026-10-01)
+1. Split "Algorithms and high-performance computing" into "Algorithms for sequence analysis" (edit-distance motifs, quorum PMS, KCMBT, perfect reads, MSC) and "Algorithms, optimization and parallel computing" (PhD light-trails JPDC 2012, fragmented colouring DAM 2015, IBM e-Energy 2013 meter connectivity, NIPS-workshop sparse integer recovery, parallel Jacobi SVD HPCC 2016, Hybrid-DCA JPDC 2020). Both placed last in Research. KCMBT/qPMS papers listed (cards stay hidden).

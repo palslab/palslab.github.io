@@ -49,12 +49,20 @@
     independently of the core sequence motif.
   papers: [nar-2019-coselect]
   status: live
-- id: algorithms-hpc
-  theme: Algorithms and high-performance computing
+- id: sequence-algorithms
+  theme: Algorithms for sequence analysis
   summary: >-
-    Efficient sequential and parallel algorithms for core problems in sequence analysis
-    and machine learning: edit-distance and quorum planted motif search, k-mer counting,
-    sequencing-error detection, parallel Jacobi SVD, and asynchronous distributed
-    optimization.
-  papers: [bmcgen-2016-edm, bioinf-2016-kcmbt, bmcbioinf-2015-perfect, jpdc-2020-hybriddca]
+    Efficient sequential and parallel algorithms for core problems in genomic sequence
+    analysis: motif discovery under edit-distance and quorum constraints, k-mer counting,
+    detecting error-free reads, and metagenomic classification.
+  papers: [bmcgen-2016-edm, ijdmb-2017-qpms, bioinf-2016-kcmbt, bmcbioinf-2015-perfect, bioinf-2019-msc]
+  status: live
+- id: algorithms-optimization
+  theme: Algorithms, optimization and parallel computing
+  summary: >-
+    From doctoral work on scheduling light-trails in optical networks and on graph
+    colouring, through inferring power-grid connectivity from smart-meter data (IBM
+    Research) and recovering sparse integer solutions, to parallel SVD and asynchronous
+    distributed optimization for machine learning.
+  papers: [jpdc-2012-lighttrails, dam-2015-coloring, eenergy-2013-meter, nips-2011-sparse, hpcc-2016-svd, jpdc-2020-hybriddca]
   status: live
