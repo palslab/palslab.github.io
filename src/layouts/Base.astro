@@ -1,6 +1,10 @@
 ---
-import '@fontsource-variable/source-sans-3';
-import fontUrl from '@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2?url';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/400-italic.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-sans/700.css';
+import font400 from '@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2?url';
+import font700 from '@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-700-normal.woff2?url';
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
@@ -12,7 +16,7 @@ const fullTitle = title ? `${title} | ${site.lab_name}` : `${site.lab_name} | ${
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
 ---
 <!doctype html>
-<html lang="en" data-palette={(site.design?.palette ?? "A").toLowerCase()}>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +24,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="description" content={description.trim()} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href={fontUrl} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={font400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={font700} as="font" type="font/woff2" crossorigin />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description.trim()} />
     <meta property="og:url" content={canonical} />

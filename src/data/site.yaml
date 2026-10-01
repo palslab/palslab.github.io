@@ -4,13 +4,9 @@
 # ---------------------------------------------------------------------------
 lab_name: Pal Lab
 subtitle: Computational Biology
-tagline: GROUNDING VIRTUAL CELLS
+tagline: Grounding virtual cells
 site_url: https://palslab.github.io
 
-# Look: palette A (rod indigo) or B (visual purple); hero layout A (colour band) or B (white, wide art)
-design:
-  palette: A
-  hero: A
 
 # Hero welcome (vision level only — no aims, no results)
 welcome: >-

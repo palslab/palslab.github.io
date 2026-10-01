@@ -19,6 +19,8 @@ for (const width of [1280, 390, 360]) {
     await page.evaluate(() => document.querySelectorAll('img[loading="lazy"]').forEach((i) => { i.loading = 'eager'; }));
     await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } window.scrollTo(0, 0); await new Promise((r) => setTimeout(r, 400)); });
     await page.waitForLoadState('networkidle');
+    // sticky header would be painted mid-page in a stitched full-page capture; pin it to the top for the shot
+    await page.addStyleTag({ content: '.site-header{position:relative!important}' });
     if (width !== 360) await page.screenshot({ path: `${out}/${name}-${width}.png`, fullPage: true });
   }
   if (width === 1280) {
