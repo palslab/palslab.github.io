@@ -6,7 +6,7 @@ lab_name: Pal Lab
 subtitle: Computational Biology
 # Hero: the lab name is the headline; this line sits under it. Keep it direction-neutral
 # until the new research direction is preprinted.
-tagline: Computational biology, led by Soumitra Pal
+tagline: Led by Soumitra Pal | Computational Biology of Cell Identity and Change
 site_url: https://palslab.github.io
 
 # Home-page sections that can be hidden (true = shown). Hidden sections also drop out of the nav.
@@ -15,12 +15,13 @@ sections:
   join: false       # hidden for now (PI, round 5)
 
 
-# Hero welcome — based on published work only
+# Hero welcome (PI wording, round 10)
 welcome: >-
-  We use computation to understand how cells are organized, how their gene expression
-  evolves, and how they fail: from expression evolution across species and single-cell
-  atlases to the development and aging of photoreceptors. Our tools range from
-  stochastic process models and physics-informed neural networks to scalable algorithms.
+  We use computation to understand how cells acquire identity, maintain it, and change
+  across development, evolution, aging, and disease. Our work spans gene-expression
+  evolution, single-cell atlases, and photoreceptor biology, combining scalable
+  algorithms, stochastic models, machine learning, and physics-informed approaches to
+  build biologically grounded models of cell state.
 
 pi:
   name: Soumitra Pal
