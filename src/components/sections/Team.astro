@@ -36,4 +36,7 @@ const links = Object.entries(pi.links ?? {}).filter(([, v]) => v);
   .person .smallcaps { margin: 0; }
   .aff { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
   .trainees-h { margin-top: 40px; }
+  .pi-bio p { margin: 0 0 1em; }
+  /* pull the first line up by its half-leading so the letters, not the line box, align with the photo's top edge */
+  .pi-bio > :first-child { margin-top: -0.4em; }
 </style>

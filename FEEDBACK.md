@@ -59,3 +59,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 
 ## Round 7 (2026-10-01)
 1. Team bio replaced with the PI's text, edited: typo fixed; unpublished-work claims (retinal disease, chromatin profiling, organoids, "open" PINNOU) removed; the predictive-program paragraph softened to one sentence and merged into paragraph 2 (PI choice). Bio now renders as separate paragraphs.
+
+## Round 8 (2026-10-01)
+1. Team: bio text now starts level with the top of the photo (removed the first paragraph's top margin).
