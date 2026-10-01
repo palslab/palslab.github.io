@@ -9,6 +9,11 @@ subtitle: Computational Biology
 tagline: Computational biology, led by Soumitra Pal
 site_url: https://palslab.github.io
 
+# Home-page sections that can be hidden (true = shown). Hidden sections also drop out of the nav.
+sections:
+  approach: false   # hidden until the approach is published (PI, round 5)
+  join: false       # hidden for now (PI, round 5)
+
 
 # Hero welcome — based on published work only
 welcome: >-

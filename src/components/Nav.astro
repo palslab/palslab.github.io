@@ -1,6 +1,6 @@
 ---
-import { site } from '../lib/data';
-const items = [
+import { site, showSection } from '../lib/data';
+const all = [
   { href: '/#approach', label: 'Approach' },
   { href: '/#research', label: 'Research' },
   { href: '/#ai-ml', label: 'AI & ML' },
@@ -12,6 +12,7 @@ const items = [
   { href: '/#team', label: 'Team' },
   { href: '/#contact', label: 'Contact' },
 ];
+const items = all.filter((i) => !i.href.startsWith('/#') || showSection(i.href.slice(2)));
 ---
 <header class="site-header">
   <nav class="container nav" aria-label="Main">

@@ -1,5 +1,5 @@
 ---
-import { site } from '../lib/data';
+import { site, showSection } from '../lib/data';
 import { mosaic } from '../lib/mosaic';
 const art = mosaic();
 const f = (n: number) => +n.toFixed(1);
@@ -12,7 +12,7 @@ const f = (n: number) => +n.toFixed(1);
       <p class="hero-welcome">{site.welcome}</p>
       <p class="hero-actions">
         <a class="button" href="#research">See our research</a>
-        <a class="hero-link" href="#join">Join the lab</a>
+        {showSection('join') && <a class="hero-link" href="#join">Join the lab</a>}
       </p>
     </div>
   </div>

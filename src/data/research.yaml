@@ -10,7 +10,7 @@
     training. The aim is to detect when cells leave a healthy state and to rank
     interventions that could bring them back, starting with photoreceptors.
   papers: []
-  status: live
+  status: draft   # hidden until published/preprinted (PI, round 5)
 - id: expression-evolution
   theme: Evolution of gene expression
   summary: >-

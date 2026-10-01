@@ -12,7 +12,7 @@ function load<T>(file: string): T {
 }
 
 export interface Site {
-  lab_name: string; subtitle: string; tagline: string; site_url: string; welcome: string;
+  lab_name: string; subtitle: string; sections?: Record<string, boolean>; tagline: string; site_url: string; welcome: string;
   pi: { name: string; title: string; affiliation: string; photo: string; bio: string; email: string;
         links: Record<string, string> };
   contact: { email: string; address: string[] };
@@ -25,20 +25,22 @@ export interface Publication {
   roles?: { co_first?: string[]; corresponding?: string[] };
   status?: string; show?: boolean; selected?: boolean;
 }
-export interface Software { name: string; blurb?: string; paper_doi?: string; repo?: string; docs?: string }
+export interface Software { show?: boolean; name: string; blurb?: string; paper_doi?: string; repo?: string; docs?: string }
 export interface News { date: string | number | Date; text: string; link?: string }
 export interface Person { name: string; role?: string; program?: string; years?: string; now?: string;
   consent?: boolean; photo_consent?: boolean; photo?: string }
 export interface Theme { id: string; theme: string; summary: string; papers: string[]; status: 'live' | 'draft' }
 
 export const site = load<Site>('site.yaml');
+/** A home-page section is shown unless site.yaml `sections.<key>` is false. */
+export const showSection = (key: string) => site.sections?.[key] !== false;
 
 export const publications = (load<Publication[]>('publications.yaml') ?? []).filter(
   (p) => p.show !== false && p.status !== 'in-preparation',
 );
 export const pubById = new Map(publications.map((p) => [p.id, p]));
 
-export const software = load<Software[]>('software.yaml') ?? [];
+export const software = (load<Software[]>('software.yaml') ?? []).filter((s) => s.show !== false);
 // News dates may be YYYY, YYYY-MM or YYYY-MM-DD; show only the precision given.
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function normDate(d: News['date']) {

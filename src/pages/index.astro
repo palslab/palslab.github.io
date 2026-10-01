@@ -10,16 +10,17 @@ import Mentoring from '../components/sections/Mentoring.astro';
 import Join from '../components/sections/Join.astro';
 import Team from '../components/sections/Team.astro';
 import Contact from '../components/sections/Contact.astro';
+import { showSection } from '../lib/data';
 ---
 <Base>
   <Hero />
-  <Approach />
+  {showSection('approach') && <Approach />}
   <Research />
   <AiMl />
   <Software />
   <NewsPubs />
   <Mentoring />
-  <Join />
+  {showSection('join') && <Join />}
   <Team />
   <Contact />
 </Base>

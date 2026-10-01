@@ -47,3 +47,9 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 - PI created the free GitHub organization `palslab`; authorized GitHub CLI (device login) for this session.
 - Created public repo palslab/palslab.github.io, pushed main, Pages source = GitHub Actions. Deploy runs (push + manual) succeeded; draft check passed in CI.
 - Live: https://palslab.github.io — home and publications verified live (correct hero, sections, no draft terms); all internal links/anchors resolve; all clickable external links verified (5 DOIs, 6 GitHub URLs).
+
+## Round 5 (2026-10-01)
+1. Hide Approach section → `sections.approach: false` in site.yaml (section and nav item removed).
+2. Hide research theme "Predictive models of cell state and dysfunction" → `status: draft` in research.yaml (also guarded by check:drafts).
+3. Hide KCMBT and qPMS10 software cards → `show: false` in software.yaml (their papers stay on the Publications page).
+4. Hide Join Us → `sections.join: false` (section, nav item and the hero "Join the lab" link removed).

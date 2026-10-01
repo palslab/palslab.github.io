@@ -20,6 +20,7 @@
   paper_doi: 10.1109/BIBM.2015.7359740
   repo: https://github.com/soumitrakp/ems2
 - name: qPMS10
+  show: false   # hidden for now (PI, round 5)
   blurb: Randomized algorithm for the quorum planted motif search problem.
   paper_doi: 10.1109/BIBM.2016.7822598
 - name: perfectread
@@ -27,6 +28,7 @@
   paper_doi: 10.1186/1471-2105-16-S17-S7
   repo: https://github.com/soumitrakp/perfectread
 - name: KCMBT
+  show: false   # hidden for now (PI, round 5)
   blurb: k-mer counter based on multiple burst trees.
   paper_doi: 10.1093/bioinformatics/btw345
 - name: Hybrid-DCA
