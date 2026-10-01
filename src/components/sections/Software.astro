@@ -1,6 +1,6 @@
 ---
 import Section from '../Section.astro';
-import { software, doiUrl } from '../../lib/data';
+import { software, doiUrl, isVerifiedDoi } from '../../lib/data';
 ---
 <Section id="software" title="Software">
   <div class="grid grid-3">
@@ -8,9 +8,9 @@ import { software, doiUrl } from '../../lib/data';
       <article class="card">
         <h3>{s.name}</h3>
         {s.blurb ? <p>{s.blurb}</p> : <p class="placeholder">Description to be added.</p>}
-        {(s.paper_doi || s.repo || s.docs) && (
+        {(isVerifiedDoi(s.paper_doi) || s.repo || s.docs) && (
           <ul class="pills" aria-label={`${s.name} links`}>
-            {s.paper_doi && <li><a class="pill" href={doiUrl(s.paper_doi)}>Paper</a></li>}
+            {isVerifiedDoi(s.paper_doi) && <li><a class="pill" href={doiUrl(s.paper_doi)}>Paper</a></li>}
             {s.repo && <li><a class="pill" href={s.repo}>GitHub</a></li>}
             {s.docs && <li><a class="pill" href={s.docs}>Docs</a></li>}
           </ul>

@@ -21,18 +21,34 @@ const files = [];
 const corpus = files.map((f) => [f, fs.readFileSync(f, 'utf8')]);
 
 const banned = [];
-const draft = fs.readFileSync('src/content/drafts/virtual-cells.md', 'utf8');
-if (/^status:\s*draft\s*$/m.test(draft)) { /* draft guard terms: see private-guards.txt */ }
-
+// Sensitive guard terms (draft project name, unpublished numbers, application wording) live in a
+// git-ignored local file so the public repository never contains them. One term per line; # comments.
+const guardFile = 'scripts/private-guards.txt';
+const draftPath = 'src/content/drafts/virtual-cells.md';
+const draft = fs.existsSync(draftPath) ? fs.readFileSync(draftPath, 'utf8') : 'status: draft';
+const draftLive = /^status:\s*live\s*$/m.test(draft);
+if (fs.existsSync(guardFile)) {
+  for (const line of fs.readFileSync(guardFile, 'utf8').split('\n')) {
+    const t = line.trim(); if (!t || t.startsWith('#')) continue;
+    const [term, tag] = t.split('|').map((x) => x.trim());
+    if (tag === 'draft' && draftLive) continue; // draft terms are allowed once the draft is published
+    banned.push([term, tag === 'draft' ? 'unpublished draft material' : 'private term']);
+  }
+} else console.warn(`note: ${guardFile} not found — only data-file guards active.`);
 const load = (f) => yamlLoad(fs.readFileSync(`src/data/${f}`, 'utf8')) ?? [];
 for (const p of load('publications.yaml'))
   if (p.show === false || p.status === 'in-preparation') banned.push([p.title, `hidden publication ${p.id}`]);
 for (const t of load('research.yaml'))
   if (t.status === 'draft') banned.push([t.theme, `draft theme ${t.id}`]);
-for (const t of load('people.yaml'))
-  if (t.consent !== true) banned.push([t.name, 'trainee without consent']);
-
+// Trainees without consent must not be listed in the Team section. (Their names may
+// legitimately appear as co-authors in publications, so only the Team section is scanned.)
+const home = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+const team = home.slice(home.indexOf('id="team"'), home.indexOf('id="contact"'));
 let fail = 0;
+for (const t of load('people.yaml'))
+  if (t.consent !== true && team.includes(t.name)) { console.error(`LEAK: trainee without consent "${t.name}" in Team section`); fail++; }
+  else if (t.photo_consent !== true && t.photo && home.includes(t.photo)) { console.error(`LEAK: photo without consent for "${t.name}"`); fail++; }
+
 for (const [needle, why] of banned) {
   if (!needle) continue;
   const lower = needle.toLowerCase();

@@ -1,5 +1,5 @@
 # AI & Machine Learning list (short; generic descriptions)
-- Foundation models for retinal transcriptomics (cloud-scale work)
-- Physics-informed neural networks
-- Stochastic process models
-- Scalable optimization
+- Foundation models for retinal transcriptomics, trained and evaluated in the cloud
+- Physics-informed neural networks for phylogenetic inference
+- Stochastic process models of expression evolution and adaptation
+- Scalable optimization and parallel machine learning

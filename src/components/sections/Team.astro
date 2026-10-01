@@ -12,7 +12,7 @@ const links = Object.entries(pi.links ?? {}).filter(([, v]) => v);
         ? <img src={pi.photo} alt={`Portrait of ${pi.name}`} width="240" height="240" loading="lazy" />
         : <div class="photo-ph" role="img" aria-label="Photo to be added">{pi.name.split(' ').map((w) => w[0]).join('')}</div>}
       <h3>{pi.name}</h3>
-      <p class="smallcaps">{pi.title || 'Principal Investigator'}</p>
+      {pi.title && <p class="smallcaps">{pi.title}</p>}
       {pi.affiliation && <p class="aff">{pi.affiliation}</p>}
     </article>
     <div class="pi-bio">

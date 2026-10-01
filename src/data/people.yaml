@@ -1,10 +1,50 @@
-# Trainees mentored. Rendered ONLY when consent: true.
-# Photos ONLY when photo_consent: true.
-# Fields: name, role, program, years, now, consent, photo_consent, photo
-- name: Placeholder Trainee
-  role: ""
-  program: ""
-  years: ""
+# Trainees mentored. Rendered ONLY when consent: true (ask each person first).
+# Photos ONLY when photo_consent: true. Fields: name, program, years, now
+- name: Honray Day
+  program: Graduate Summer Internship Program (co-mentor), University of Maryland
+  years: "2026"
+  now: ""
+  consent: false
+  photo_consent: false
+- name: Hanzala Sharique
+  program: IIEST Shibpur Alumni Network mentoring (co-mentor)
+  years: 2025–26
+  now: ""
+  consent: false
+  photo_consent: false
+- name: Suraj Kashyap
+  program: IIEST Shibpur Alumni Network mentoring (co-mentor)
+  years: 2025–26
+  now: ""
+  consent: false
+  photo_consent: false
+- name: Samyajit Das
+  program: IIEST Shibpur Alumni Network mentoring (co-mentor)
+  years: 2025–26
+  now: ""
+  consent: false
+  photo_consent: false
+- name: Leo Goubet-McCall
+  program: Postbaccalaureate fellow, B.S. Pennsylvania State University
+  years: 2024–26
+  now: Graduate training at Yale
+  consent: false
+  photo_consent: false
+- name: Ojas Chaudhary
+  program: High School Summer Internship Program
+  years: "2023"
+  now: Undergraduate, McGill University
+  consent: false
+  photo_consent: false
+- name: Niko Darby
+  program: "Postbaccalaureate IRTA fellow, Sewanee: The University of the South"
+  years: "2020"
+  now: ""
+  consent: false
+  photo_consent: false
+- name: Mike-Ryan Mofor
+  program: Community College Summer Enrichment Program, Salisbury University
+  years: "2018"
   now: ""
   consent: false
   photo_consent: false

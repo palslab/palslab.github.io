@@ -1,55 +1,245 @@
-# Publications. Phase 1: placeholders only (show: false entries never render).
+# Publications, transcribed from the CV (24 Sep 2026).
 # Fields:
-#   id, authors (list; PI bolded automatically), title, venue, year, doi,
+#   id, authors (list; PI bolded automatically; "…" = elided authors), title, venue,
+#   year, doi, doi_verified (true only after the DOI resolved — link renders only then),
 #   type: journal | conference | preprint | chapter
-#   roles: { co_first: [author names], corresponding: [author names] }
+#   roles: { co_first: [...], corresponding: [...] }  (exactly as marked in the CV)
+#   note: short annotation shown after the citation
 #   status: published | under-review | in-preparation
-#   show: true|false   (false = excluded from build; default for in-preparation)
-#   selected: true     (one of the 5 headline papers on the home page)
-- id: placeholder-journal
-  authors: [A. Author, Soumitra Pal, B. Author]
-  title: "Placeholder journal article (replaced in Phase 2)"
-  venue: Journal Name
-  year: 2026
-  doi: ""
-  type: journal
-  roles: { co_first: [A. Author, Soumitra Pal], corresponding: [Soumitra Pal] }
-  status: published
-  show: true
-  selected: true
-- id: placeholder-conference
-  authors: [Soumitra Pal, C. Author]
-  title: "Placeholder conference paper (replaced in Phase 2)"
-  venue: Conference Name
-  year: 2025
-  doi: ""
-  type: conference
-  status: published
-  show: true
-  selected: true
-- id: placeholder-preprint
-  authors: [Soumitra Pal, D. Author]
-  title: "Placeholder preprint (replaced in Phase 2)"
-  venue: Preprint server
-  year: 2025
-  doi: ""
-  type: preprint
-  status: under-review
-  show: true
-- id: placeholder-chapter
-  authors: [Soumitra Pal]
-  title: "Placeholder book chapter (replaced in Phase 2)"
-  venue: Book title
-  year: 2024
-  doi: ""
+#   show: false → never rendered (default for anything not yet public)
+#   selected: true → one of the 5 headline papers on the home page
+
+# ---------- Book chapters (not yet public; hidden) ----------
+- id: chapter-textmining
+  authors: [Anderson Mayfield, Soumitra Pal]
+  title: "Leveraging machine-learning-based text-mining tools for the analysis of 'Omics datasets"
+  venue: "Mass Spectrometry in Biomedical Research: From Fundamentals to Advanced Research (S. Bhattacharya, ed.)"
+  year: 2027
   type: chapter
-  status: published
-  show: true
-- id: placeholder-in-prep
-  authors: [Soumitra Pal]
-  title: "In-preparation item — must NOT appear in the build"
-  venue: ""
+  roles: { corresponding: [Anderson Mayfield] }
+  status: under-review
+  show: false
+- id: chapter-foundation-models
+  authors: [Soumitra Pal, Aleksandr Friman, Anand Swaroop]
+  title: "Language and Multimodal Foundation Models in Vision Research: Opportunities from Next-Generation AI"
+  venue: "Accelerating vision research with next generation omics and machine intelligence (A. Mondal, R. Ratnapriya, eds.)"
   year: 2026
-  type: journal
+  type: chapter
+  roles: { corresponding: [Soumitra Pal, Anand Swaroop] }
   status: in-preparation
   show: false
+
+# ---------- Manuscripts in preparation (hidden) ----------
+- { id: prep-rod-birds, authors: [Leo Goubet-McCall, Soumitra Pal, Suja Hiriyanna, Jacob Nellissery, Anand Swaroop], title: "Exploring Convergent Mechanisms of Rod Determination in Birds and Mammals", venue: "", year: 2027, type: journal, status: in-preparation, show: false }
+- { id: prep-evocluster, authors: [Hanzala Sharique, Suraj Kashyap, Samyajit Das, Ashish Kumar Layek, Soumitra Pal], title: "EvoCluster: Multiscale Leiden Clustering of ESM-C Embeddings for Orthogroup Detection", venue: "", year: 2026, type: journal, status: in-preparation, show: false }
+- { id: prep-dimorphism, authors: [Soumitra Pal, Honray Day, Brian Oliver, Teresa M. Przytycka], title: "Sexual dimorphism in Drosophila at single nucleus resolution", venue: "", year: 2026, type: journal, status: in-preparation, show: false }
+- { id: prep-organoid, authors: [Mohita Gaur, Anjani Kumari, Madhuri Rudraraju, Nivedita Singh, Matthew Brooks, Soumitra Pal, Anand Swaroop], title: "Long-term culture reveals transcriptional and 3D genomic remodeling during maintenance of human retinal organoid identity", venue: "", year: 2026, type: journal, status: in-preparation, show: false }
+- { id: prep-nrl, authors: [Anjani Kumari, Amy Chen, Kaori Ueda, Alastair Tulloch, Suja Hiriyanna, Jacob Nellissery, Soumitra Pal, Anand Swaroop], title: "The Rise of the Rod: Evolutionary Reconstruction of NRL Function", venue: "", year: 2026, type: journal, status: in-preparation, show: false }
+- { id: prep-nocturnal, authors: [Soumitra Pal, Noor D. White Carreiro, Zachary Batz, Anand Swaroop], title: "Retinal RNA-seq analysis by phylogenetic Ornstein-Uhlenbeck process-based methods uncover adaptive evolution of gene expression in nocturnal birds", venue: "", year: 2026, type: journal, status: in-preparation, show: false }
+
+# ---------- Preprints / under review ----------
+- id: maf-otx-2026
+  authors: [Soumitra Pal, Noor D. White Carreiro, Zachary Batz, Leo Goubet-McCall, Caroline Judy, Anand Swaroop]
+  title: "Evolution of MAF and OTX families during the emergence and stabilization of rod photoreceptors across Metazoans"
+  venue: Research Square
+  year: 2026
+  doi: 10.21203/rs.3.rs-10144266/v1
+  type: preprint
+  roles: { co_first: [Soumitra Pal, Noor D. White Carreiro], corresponding: [Soumitra Pal, Anand Swaroop] }
+  status: under-review
+  selected: true
+- id: pinnou-2026
+  authors: [Soumitra Pal, Ojas Chaudhary, Anand Swaroop]
+  title: "PINNOU: Physics-Informed Neural Networks for Phylogenetic Ornstein–Uhlenbeck Inference"
+  venue: "Extended abstract, EvolCompGen COSI, ISMB 2026"
+  year: 2026
+  doi: 10.5281/zenodo.22814087
+  doi_verified: true
+  type: preprint
+  roles: { corresponding: [Soumitra Pal, Anand Swaroop] }
+  note: Full manuscript in preparation.
+  status: published
+
+# ---------- Journal articles ----------
+- id: genetics-2026-allometry
+  authors: [Soumitra Pal, Jerome Avellaneda, Celena M. Cherian, Puja Biswas, Georg Vogler, Elizabeth J. Rideout, Frank Schnorrer, Teresa M. Przytycka, Brian Oliver]
+  title: "Cell type specific allometry controls sex-differences in Drosophila organ size"
+  venue: "Genetics 233(2): iyag091"
+  year: 2026
+  doi: 10.1093/genetics/iyag091
+  doi_verified: true
+  type: journal
+  roles: { corresponding: [Teresa M. Przytycka] }
+  note: Selected as a GENETICS Featured Article.
+  status: published
+  selected: true
+- id: micropub-2025-dosage
+  authors: [Soumitra Pal, Brian Oliver, Teresa M. Przytycka]
+  title: "Cell-Type Specific Variation in X-Chromosome Dosage Compensation in Drosophila"
+  venue: microPublication Biology
+  year: 2025
+  doi: 10.17912/micropub.biology.001501
+  doi_verified: true
+  type: journal
+  roles: { corresponding: [Soumitra Pal, Teresa M. Przytycka] }
+  status: published
+- id: agingcell-2025
+  authors: [Laura Campello, Matthew Brooks, Benjamin Fadl, Hyo Sub Choi, Soumitra Pal, Anand Swaroop]
+  title: "Transcriptional Heterogeneity and Differential Response of Rod Photoreceptor Pathway Uncovered by Single-Cell RNA Sequencing of the Aging Mouse Retina"
+  venue: "Aging Cell, e70001"
+  year: 2025
+  doi: 10.1111/acel.70001
+  type: journal
+  roles: { co_first: [Laura Campello, Matthew Brooks], corresponding: [Anand Swaroop] }
+  status: published
+- id: cellsys-2025-tumor
+  authors: [M.G. Hirsch, Soumitra Pal, Farid Rashidi Mehrabadi, Salem Malikic, Charli Gruen, Antonella Sassano, Eva Pérez-Guijarro, Glenn Merlino, Cenk Sahinalp, Erin K. Molloy, Chi-Ping Day, Teresa M. Przytycka]
+  title: "Stochastic modelling of single-cell gene expression adaptation reveals non-genomic contribution to evolution of tumor subclones"
+  venue: "Cell Systems 16(1)"
+  year: 2025
+  doi: 10.1016/j.cels.2024.11.013
+  type: journal
+  roles: { corresponding: [Chi-Ping Day, Teresa M. Przytycka] }
+  status: published
+- id: elife-2024-gonad
+  authors: [Sharvani Mahadevaraju, Soumitra Pal, Pradeep Bhaskar, Brennan McDonald, Leif Benner, Luca Denti, Davide Cozzi, Paola Bonizzoni, Teresa M. Przytycka, Brian Oliver]
+  title: "Diverse somatic Transformer and sex chromosome karyotype pathways regulate gene expression in Drosophila gonad development"
+  venue: eLife
+  year: 2024
+  doi: 10.7554/eLife.101641
+  type: journal
+  roles: { co_first: [Sharvani Mahadevaraju, Soumitra Pal], corresponding: [Sharvani Mahadevaraju, Soumitra Pal, Brian Oliver] }
+  status: published
+  selected: true
+- id: ijms-2023-grth
+  authors: [Raghuveer Kavarthapu, Rajakumar Anbazhagan, Soumitra Pal, Maria L. Dufau]
+  title: "Single-Cell Transcriptomic Profiling of the Mouse Testicular Germ Cells Reveals Important Role of Phosphorylated GRTH/DDX25 in Round Spermatid Differentiation and Acrosome Biogenesis during Spermiogenesis"
+  venue: "International Journal of Molecular Sciences 24(4): 3127"
+  year: 2023
+  doi: 10.3390/ijms24043127
+  doi_verified: true
+  type: journal
+  roles: { corresponding: [Raghuveer Kavarthapu, Maria L. Dufau] }
+  note: Main bioinformatician (the journal did not permit co-first authorship among four authors).
+  status: published
+- id: elife-2023-testes
+  authors: [Amelie Raz, Gabriela Vida, Sarah Stern, Sharvani Mahadevaraju, Jaclyn Fingerhut, Jennifer Viveiros, Soumitra Pal, Jasmine Grey, Mara Grace, Cameron Berry, Hongjie Li, Jasper Janssens, Wouter Saelens, Zhantao Shao, Chun Hu, Yukiko M. Yamashita, Teresa Przytycka, Brian Oliver, Julie A. Brill, Henry Krause, Erika Matunis, Helen White-Cooper, Stephen DiNardo, Margaret T. Fuller]
+  title: "Emergent dynamics of adult stem cell lineages from single nucleus and single cell RNA-Seq of Drosophila testes"
+  venue: "eLife 12: e82201"
+  year: 2023
+  doi: 10.7554/eLife.82201
+  type: journal
+  roles: { co_first: [Amelie Raz, Gabriela Vida, Sarah Stern, Sharvani Mahadevaraju, Jaclyn Fingerhut, Jennifer Viveiros, Soumitra Pal, Jasmine Grey, Mara Grace], corresponding: [Stephen DiNardo, Margaret T. Fuller] }
+  status: published
+- id: jcb-2022-evogenex
+  authors: [Soumitra Pal, Brian Oliver, Teresa M. Przytycka]
+  title: "Stochastic Modeling of Gene Expression Evolution Uncovers Tissue- and Sex-Specific Properties of Expression Evolution in the Drosophila Genus"
+  venue: Journal of Computational Biology
+  year: 2022
+  doi: 10.1089/cmb.2022.0121
+  doi_verified: true
+  type: journal
+  note: Introduces EvoGeneX.
+  status: published
+  selected: true
+- id: fca-2022
+  authors: [Hongjie Li, Jasper Janssens, "…", Soumitra Pal, Teresa M. Przytycka, "…", Brian Oliver, Norbert Perrimon, Bart Deplancke, Stephen R. Quake, Liqun Luo, Stein Aerts]
+  title: "Fly Cell Atlas: a single-cell transcriptomic atlas of the adult fruit fly"
+  venue: "Science 375(6584): eabk2432"
+  year: 2022
+  doi: 10.1126/science.abk2432
+  type: journal
+  status: published
+- id: jpdc-2020-hybriddca
+  authors: [Soumitra Pal, Tingyang Xu, Tianbao Yang, Sanguthevar Rajasekaran, Jinbo Bi]
+  title: "Hybrid-DCA: A Double Asynchronous Approach for Stochastic Dual Coordinate Ascent"
+  venue: "Journal of Parallel and Distributed Computing 143: 47–66"
+  year: 2020
+  doi: 10.1016/j.jpdc.2020.04.002
+  type: journal
+  status: published
+- id: bioinf-2020-judi
+  authors: [Soumitra Pal, Teresa M. Przytycka]
+  title: "Bioinformatics pipeline using JUDI: Just Do It!"
+  venue: "Bioinformatics 36(8): 2572–2574"
+  year: 2020
+  doi: 10.1093/bioinformatics/btz956
+  type: journal
+  status: published
+- id: bioinf-2019-msc
+  authors: [Subrata Saha, Jethro Johnson, Soumitra Pal, George M. Weinstock, Sanguthevar Rajasekaran]
+  title: "MSC: a metagenomic sequence classification algorithm"
+  venue: "Bioinformatics 35(17): 2932–2940"
+  year: 2019
+  doi: 10.1093/bioinformatics/bty1071
+  type: journal
+  status: published
+- id: nar-2019-coselect
+  authors: [Soumitra Pal, Jan Hoinka, Teresa M. Przytycka]
+  title: "Co-SELECT reveals sequence non-specific contribution of DNA shape to transcription factor binding in vitro"
+  venue: "Nucleic Acids Research 47(13): 6632–6641"
+  year: 2019
+  doi: 10.1093/nar/gkz540
+  type: journal
+  status: published
+  selected: true
+- id: ijdmb-2017-qpms
+  authors: [Peng Xiao, Soumitra Pal, Sanguthevar Rajasekaran]
+  title: "Randomised sequential and parallel algorithms for efficient quorum planted motif search"
+  venue: "International Journal of Data Mining and Bioinformatics 18(2): 105–124"
+  year: 2017
+  doi: 10.1504/IJDMB.2017.086457
+  type: journal
+  status: published
+- id: bmcgen-2016-edm
+  authors: [Soumitra Pal, Peng Xiao, Sanguthevar Rajasekaran]
+  title: "Efficient sequential and parallel algorithms for finding edit distance based motifs"
+  venue: "BMC Genomics 17: 465"
+  year: 2016
+  doi: 10.1186/s12864-016-2789-9
+  type: journal
+  status: published
+- id: bioinf-2016-kcmbt
+  authors: [Abdullah-Al Mamun, Soumitra Pal, Sanguthevar Rajasekaran]
+  title: "KCMBT: a k-mer Counter based on Multiple Burst Trees"
+  venue: "Bioinformatics 32(18): 2783–2790"
+  year: 2016
+  doi: 10.1093/bioinformatics/btw345
+  type: journal
+  status: published
+- id: bmcbioinf-2015-perfect
+  authors: [Soumitra Pal, Srinivas Aluru]
+  title: "In search of perfect reads"
+  venue: "BMC Bioinformatics 16(Suppl 17): S7"
+  year: 2015
+  doi: 10.1186/1471-2105-16-S17-S7
+  type: journal
+  status: published
+- id: dam-2015-coloring
+  authors: [Ajit Diwan, Soumitra Pal, Abhiram Ranade]
+  title: "Fragmented coloring of proper interval and split graphs"
+  venue: "Discrete Applied Mathematics 193: 110–118"
+  year: 2015
+  doi: 10.1016/j.dam.2015.04.014
+  type: journal
+  status: published
+- id: jpdc-2012-lighttrails
+  authors: [Soumitra Pal, Abhiram Ranade]
+  title: "Scheduling light-trails on WDM rings"
+  venue: "Journal of Parallel and Distributed Computing 72(10): 1226–1236"
+  year: 2012
+  doi: 10.1016/j.jpdc.2012.05.010
+  type: journal
+  status: published
+
+# ---------- Refereed conference papers ----------
+- { id: hpcc-2016-svd, authors: [Soumitra Pal, Sudipta Pathak, Sanguthevar Rajasekaran], title: "On Speeding-up Parallel Jacobi Iterations for SVDs", venue: "IEEE HPCC 2016, Sydney, pp. 9–16", year: 2016, doi: 10.1109/HPCC-SmartCity-DSS.2016.0013, type: conference, status: published }
+- { id: bibm-2016-qpms10, authors: [Peng Xiao, Soumitra Pal, Sanguthevar Rajasekaran], title: "qPMS10: A Randomized Algorithm for Efficiently Solving Quorum Planted Motif Search Problem", venue: "IEEE BIBM 2016, Shenzhen, pp. 670–675", year: 2016, doi: 10.1109/BIBM.2016.7822598, type: conference, status: published }
+- { id: bibm-2015-ems2, authors: [Soumitra Pal, Sanguthevar Rajasekaran], title: "Improved Algorithms for Finding Edit Distance Based Motifs", venue: "IEEE BIBM 2015, Washington DC, pp. 537–542", year: 2015, doi: 10.1109/BIBM.2015.7359740, type: conference, status: published }
+- { id: iccabs-2015-kmer, authors: [Abdullah-Al Mamun, Soumitra Pal, Sanguthevar Rajasekaran], title: "Efficient techniques for k-mer counting", venue: "IEEE ICCABS 2015, Miami, FL", year: 2015, doi: 10.1109/ICCABS.2015.7344733, type: conference, status: published }
+- { id: iccabs-2014-perfect, authors: [Soumitra Pal, Srinivas Aluru], title: "In Search of Perfect Reads", venue: "IEEE ICCABS 2014, Miami, FL, pp. 1–2", year: 2014, doi: 10.1109/ICCABS.2014.6863919, type: conference, status: published }
+- { id: eenergy-2013-meter, authors: [Vijay Arya, T. S. Jayram, Soumitra Pal, Shivkumar Kalyanaraman], title: "Inferring Connectivity Model from Meter Measurements in Distribution Networks", venue: "ACM International Conference on Future Energy Systems (e-Energy), pp. 173–182", year: 2013, doi: 10.1145/2487166.2487186, type: conference, status: published }
+- { id: adcom-2009-lighttrails, authors: [Soumitra Pal, Abhiram Ranade], title: "Scheduling Light-trails on WDM Rings", venue: "International Conference on Advanced Computing and Communications (ADCOM)", year: 2009, url: "https://arxiv.org/abs/1112.6254", type: conference, status: published }
+- { id: nips-2011-sparse, authors: [T. S. Jayram, Soumitra Pal, Vijay Arya], title: "Recovery of a Sparse Integer Solution to an Underdetermined System of Linear Equations", venue: "NIPS Workshop on Sparse Representation and Low-rank Approximation, Granada", year: 2011, url: "https://arxiv.org/abs/1112.1757", type: conference, status: published }
+- { id: gspx-2004-hindsight, authors: [Soumitra Pal, Ish Dham, Tor E. Jeremiassen], title: "Design and Validation Techniques to Implement a Robust Hindsight Feature on ISA Simulators", venue: "Global Signal Processing Expo and Conference (GSPx), Santa Clara", year: 2004, type: conference, status: published }
+- { id: gspx-2004-saverestore, authors: [Soumitra Pal, Prem Kumar Vadapalli], title: "A methodology for Saving and Restoring the State of ISA simulators", venue: "Global Signal Processing Expo and Conference (GSPx), Santa Clara", year: 2004, type: conference, status: published }

@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { news, fmtDate } from '../../lib/data';
+import { news } from '../../lib/data';
 ---
 <Base title="News">
   <section class="section">
@@ -8,7 +8,7 @@ import { news, fmtDate } from '../../lib/data';
       <h1 class="section-title">News archive</h1>
       <ul class="news-all">
         {news.map((n) => (
-          <li><time datetime={n.date.toISOString().slice(0, 10)}>{fmtDate(n.date)}</time>
+          <li><time datetime={n.iso}>{n.label}</time>
             <span>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</span></li>
         ))}
       </ul>

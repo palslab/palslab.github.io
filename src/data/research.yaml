@@ -1,32 +1,60 @@
 # Research themes. status: live | draft (draft never renders).
-# Fields: id, theme, summary, papers (publication ids), status
+# Only published / preprinted work is described here (CLAUDE.md §2.3).
 - id: predictive-models
   theme: Predictive models of cell state and dysfunction
-  summary: ""
+  summary: >-
+    Single-cell atlases and foundation models describe cell states in great detail, but
+    description is not prediction. We build compact, interpretable models of cell state
+    whose complexity is chosen by performance on unseen biological samples, and we test
+    them against regulatory, functional and evolutionary evidence that was withheld from
+    training. The aim is to detect when cells leave a healthy state and to rank
+    interventions that could bring them back, starting with photoreceptors.
   papers: []
   status: live
 - id: expression-evolution
   theme: Evolution of gene expression
-  summary: ""
-  papers: []
+  summary: >-
+    How does gene expression evolve: neutrally, under constraint, or adaptively? EvoGeneX
+    models expression across species with Ornstein–Uhlenbeck processes and uncovered
+    tissue- and sex-specific patterns of expression evolution in the Drosophila genus.
+    PINNOU extends this with physics-informed neural networks. We apply these methods to
+    retinal transcriptomes from more than 100 species, including adaptive expression in
+    nocturnal birds.
+  papers: [jcb-2022-evogenex, pinnou-2026, cellsys-2025-tumor]
   status: live
 - id: photoreceptor-evolution
   theme: Photoreceptor evolution and development
-  summary: ""
-  papers: []
+  summary: >-
+    Rod photoreceptors enable dim-light vision. We trace how the MAF and OTX transcription
+    factor families, key to photoreceptor specification, evolved across Metazoa through
+    two rounds of whole-genome duplication, and study rod development in birds and
+    mammals and transcriptional changes in the aging retina.
+  papers: [maf-otx-2026, agingcell-2025]
   status: live
 - id: single-cell-atlases
   theme: Single-cell atlases and sex differences
-  summary: ""
-  papers: []
+  summary: >-
+    As part of the Fly Cell Atlas we analyzed sex differences across adult fly tissues,
+    identifying sex-biased cell counts and gene expression. Follow-up work showed that
+    cell-type-specific allometry controls sex differences in organ size, that X-chromosome
+    dosage compensation varies by cell type, and how Transformer and sex-chromosome
+    karyotype pathways regulate gonad development.
+  papers: [genetics-2026-allometry, fca-2022, micropub-2025-dosage, elife-2024-gonad]
   status: live
 - id: regulatory-genomics
   theme: Regulatory genomics
-  summary: ""
-  papers: []
+  summary: >-
+    Co-SELECT analyzes HT-SELEX data to separate sequence-specific from shape-dependent
+    binding, revealing that DNA shape contributes to transcription-factor binding
+    independently of the core sequence motif.
+  papers: [nar-2019-coselect]
   status: live
 - id: algorithms-hpc
   theme: Algorithms and high-performance computing
-  summary: ""
-  papers: []
+  summary: >-
+    Efficient sequential and parallel algorithms for core problems in sequence analysis
+    and machine learning: edit-distance and quorum planted motif search, k-mer counting,
+    sequencing-error detection, parallel Jacobi SVD, and asynchronous distributed
+    optimization.
+  papers: [bmcgen-2016-edm, bioinf-2016-kcmbt, bmcbioinf-2015-perfect, jpdc-2020-hybriddca]
   status: live

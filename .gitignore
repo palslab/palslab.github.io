@@ -14,3 +14,7 @@ PLAYBOOK.md
 # Draft pages with unpublished material — never in the public repo
 src/content/drafts/*
 !src/content/drafts/README.md
+
+# Local-only guard terms and private review notes
+scripts/private-guards.txt
+review/**/CHECKLIST.md

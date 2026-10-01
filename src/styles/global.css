@@ -51,3 +51,4 @@ h1, h2, h3 { line-height: 1.25; color: var(--ink); }
 .pub-list li { padding: 12px 0; border-bottom: 1px solid var(--line); }
 .pub-title { font-weight: 600; }
 .pub-meta { color: var(--muted); font-size: 0.95rem; }
+.pub-note { font-size: 0.9rem; color: var(--muted); font-style: italic; }

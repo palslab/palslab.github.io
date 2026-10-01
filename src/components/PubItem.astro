@@ -1,10 +1,10 @@
 ---
-import { site, doiUrl, type Publication } from '../lib/data';
+import { site, pubLink, type Publication } from '../lib/data';
 interface Props { pub: Publication }
 const { pub } = Astro.props;
 const coFirst = new Set(pub.roles?.co_first ?? []);
 const corr = new Set(pub.roles?.corresponding ?? []);
-const typeLabel = { journal: 'Journal', conference: 'Conference', preprint: 'Preprint', chapter: 'Book chapter' }[pub.type];
+const link = pubLink(pub);
 ---
 <li data-year={pub.year} data-type={pub.type}>
   <span class="pub-authors">
@@ -14,9 +14,10 @@ const typeLabel = { journal: 'Journal', conference: 'Conference', preprint: 'Pre
       </Fragment>
     ))}.
   </span>
-  <span class="pub-title"> {pub.title}.</span>
-  <span class="pub-meta"> <em>{pub.venue}</em>{pub.venue ? ', ' : ''}{pub.year}.
+  <span class="pub-title"> {pub.title}{/[.!?]$/.test(pub.title) ? '' : '.'}</span>
+  <span class="pub-meta"> <em>{pub.venue}</em>{pub.venue ? ', ' : ''}{pub.year}.{' '}
     {pub.status === 'under-review' && <span class="smallcaps"> Under review.</span>}
-    {pub.doi && <a href={doiUrl(pub.doi)}>doi:{pub.doi}</a>}
+    {' '}{link ? <a href={link}>{pub.doi ? `doi:${pub.doi}` : link.replace(/^https?:\/\//, '')}</a> : pub.doi && <span>doi:{pub.doi}</span>}
+    {pub.note && <span class="pub-note"> {pub.note}</span>}
   </span>
 </li>

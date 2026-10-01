@@ -1,7 +1,7 @@
 ---
 import Section from '../Section.astro';
 import PubItem from '../PubItem.astro';
-import { news, publications, fmtDate } from '../../lib/data';
+import { news, publications } from '../../lib/data';
 const latest = news.slice(0, 6);
 const selected = publications.filter((p) => p.selected).slice(0, 5);
 ---
@@ -11,7 +11,7 @@ const selected = publications.filter((p) => p.selected).slice(0, 5);
       <h3 class="smallcaps">Latest news</h3>
       <ul class="news">
         {latest.map((n) => (
-          <li><time datetime={n.date.toISOString().slice(0, 10)}>{fmtDate(n.date)}</time>
+          <li><time datetime={n.iso}>{n.label}</time>
             <span>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</span></li>
         ))}
       </ul>

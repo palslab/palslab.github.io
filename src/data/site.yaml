@@ -15,21 +15,29 @@ welcome: >-
 
 pi:
   name: Soumitra Pal
-  title: ""              # e.g. "Principal Investigator" — filled in Phase 2
-  affiliation: ""        # institution line, filled in Phase 2
-  photo: ""              # e.g. /images/pi.jpg (put file in public/images/)
-  bio: ""                # short bio, filled in Phase 2
-  email: ""              # personal/lab email, filled in Phase 2
-  links:                 # leave blank to hide a link
+  title: Staff Scientist
+  affiliation: National Eye Institute, National Institutes of Health
+  photo: ""              # add source/headshot.jpg → public/images/pi.jpg, then set "/images/pi.jpg"
+  bio: >-
+    Soumitra Pal is a computational biologist trained in computer science (B.E., IIEST
+    Shibpur; M.Tech. and Ph.D., IIT Bombay). After designing DSP simulators at Texas
+    Instruments, he moved into bioinformatics: parallel and randomized algorithms for
+    sequence analysis at IIT Bombay and the University of Connecticut, then five years
+    with Teresa Przytycka at NCBI on DNA shape in transcription-factor binding,
+    gene-expression evolution and the Fly Cell Atlas. He now works with Anand Swaroop
+    on retinal development, aging and evolution, using bulk and single-cell expression
+    data from more than 100 species.
+  email: soumitrakp@gmail.com   # PROVISIONAL — confirm which address to publish
+  links:                 # only verified URLs; blank = hidden (see TODO.md)
     cv: ""
     scholar: ""
     orcid: ""
-    github: ""
+    github: https://github.com/soumitrakp
     linkedin: ""
 
 contact:
-  email: ""
-  address: []            # list of lines
+  email: soumitrakp@gmail.com   # PROVISIONAL
+  address: []            # mailing address lines — add a work address when settled
 
-funding: ""              # optional funding/acknowledgement line
+funding: ""
 disclaimer: "Personal research website of Soumitra Pal. Not an official website of any employer."

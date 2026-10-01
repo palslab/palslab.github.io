@@ -1,20 +1,34 @@
-# Software cards. Only add `repo` once the URL is verified (HTTP 200/301).
-# Fields: name, blurb, paper_doi, repo, docs
+# Software cards. `repo` only when the URL was verified (HTTP 200).
+# paper_doi links render only when the DOI is listed as verified in publications.yaml.
 - name: EvoGeneX
-  blurb: ""
+  blurb: R package that tests whether gene expression evolves neutrally, under constraint, or adaptively, from RNA-seq across species and replicates.
+  paper_doi: 10.1089/cmb.2022.0121
+  repo: https://github.com/ncbi/EvoGeneX
 - name: PINNOU
-  blurb: ""
+  blurb: Physics-informed neural networks for phylogenetic Ornstein–Uhlenbeck inference.
+  paper_doi: 10.5281/zenodo.22814087
 - name: JUDI
-  blurb: ""
+  blurb: Python workflow manager for running bioinformatics pipelines across many parameter settings.
+  paper_doi: 10.1093/bioinformatics/btz956
+  repo: https://github.com/ncbi/JUDI
 - name: Co-SELECT
-  blurb: ""
+  blurb: Analysis of HT-SELEX data that reveals the contribution of DNA shape to transcription-factor binding.
+  paper_doi: 10.1093/nar/gkz540
+  repo: https://github.com/ncbi/Co-SELECT
 - name: EMS2
-  blurb: ""
+  blurb: Fast algorithms for finding edit-distance-based motifs in a set of sequences.
+  paper_doi: 10.1109/BIBM.2015.7359740
+  repo: https://github.com/soumitrakp/ems2
 - name: qPMS10
-  blurb: ""
+  blurb: Randomized algorithm for the quorum planted motif search problem.
+  paper_doi: 10.1109/BIBM.2016.7822598
 - name: perfectread
-  blurb: ""
+  blurb: Detects error-free reads in high-throughput sequencing data with substitution errors.
+  paper_doi: 10.1186/1471-2105-16-S17-S7
+  repo: https://github.com/soumitrakp/perfectread
 - name: KCMBT
-  blurb: ""
+  blurb: k-mer counter based on multiple burst trees.
+  paper_doi: 10.1093/bioinformatics/btw345
 - name: Hybrid-DCA
-  blurb: ""
+  blurb: Double-asynchronous parallel and distributed stochastic dual coordinate ascent for machine learning.
+  paper_doi: 10.1016/j.jpdc.2020.04.002

@@ -1,6 +1,6 @@
 ---
 import Section from '../Section.astro';
-import { research, pubById, doiUrl } from '../../lib/data';
+import { research, pubById, pubLink } from '../../lib/data';
 ---
 <Section id="research" title="Research">
   <div class="themes">
@@ -12,7 +12,7 @@ import { research, pubById, doiUrl } from '../../lib/data';
           {t.summary ? <p>{t.summary}</p> : <p class="placeholder">Summary to be added.</p>}
           {papers.length > 0 && (
             <ul class="theme-papers">
-              {papers.map((p) => <li>{p!.doi ? <a href={doiUrl(p!.doi)}>{p!.title}</a> : p!.title} <span class="pub-meta">({p!.venue}, {p!.year})</span></li>)}
+              {papers.map((p) => <li>{pubLink(p!) ? <a href={pubLink(p!)}>{p!.title}</a> : p!.title} <span class="pub-meta">({p!.venue}, {p!.year})</span></li>)}
             </ul>
           )}
         </article>

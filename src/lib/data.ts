@@ -19,13 +19,14 @@ export interface Site {
   funding: string; disclaimer: string;
 }
 export interface Publication {
-  id: string; authors: string[]; title: string; venue: string; year: number; doi?: string;
+  id: string; authors: string[]; title: string; venue: string; year: number;
+  doi?: string; doi_verified?: boolean; url?: string; url_verified?: boolean; note?: string;
   type: 'journal' | 'conference' | 'preprint' | 'chapter';
   roles?: { co_first?: string[]; corresponding?: string[] };
   status?: string; show?: boolean; selected?: boolean;
 }
 export interface Software { name: string; blurb?: string; paper_doi?: string; repo?: string; docs?: string }
-export interface News { date: string | Date; text: string; link?: string }
+export interface News { date: string | number | Date; text: string; link?: string }
 export interface Person { name: string; role?: string; program?: string; years?: string; now?: string;
   consent?: boolean; photo_consent?: boolean; photo?: string }
 export interface Theme { id: string; theme: string; summary: string; papers: string[]; status: 'live' | 'draft' }
@@ -38,9 +39,17 @@ export const publications = (load<Publication[]>('publications.yaml') ?? []).fil
 export const pubById = new Map(publications.map((p) => [p.id, p]));
 
 export const software = load<Software[]>('software.yaml') ?? [];
+// News dates may be YYYY, YYYY-MM or YYYY-MM-DD; show only the precision given.
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function normDate(d: News['date']) {
+  const iso = d instanceof Date ? d.toISOString().slice(0, 10) : String(d);
+  const [y, m, day] = iso.split('-').map(Number);
+  const label = day ? `${MONTHS[m - 1]} ${day}, ${y}` : m ? `${MONTHS[m - 1]} ${y}` : `${y}`;
+  return { iso, label, sort: y * 10000 + (m || 0) * 100 + (day || 0) };
+}
 export const news = (load<News[]>('news.yaml') ?? [])
-  .map((n) => ({ ...n, date: new Date(n.date) }))
-  .sort((a, b) => +b.date - +a.date);
+  .map((n) => ({ text: n.text, link: n.link, ...normDate(n.date) }))
+  .sort((a, b) => b.sort - a.sort);
 export const trainees = (load<Person[]>('people.yaml') ?? []).filter((p) => p.consent === true);
 export const research = (load<Theme[]>('research.yaml') ?? []).filter((t) => t.status === 'live');
 export const approach = load<{ title: string; text: string }[]>('approach.yaml') ?? [];
@@ -50,5 +59,10 @@ export const mentoring = load<{ philosophy: string; programs: string[]; judging:
 export const join = load<{ text: string }>('join.yaml');
 
 export const doiUrl = (doi?: string) => (doi ? `https://doi.org/${doi.replace(/^https?:\/\/doi\.org\//, '')}` : '');
-export const fmtDate = (d: Date) =>
-  d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+// A publication's link renders only if it was verified (CLAUDE.md §2.6).
+export const pubLink = (p: Publication) =>
+  p.doi && p.doi_verified ? doiUrl(p.doi) : p.url && p.url_verified ? p.url : '';
+const verifiedDois = new Set(
+  (load<Publication[]>('publications.yaml') ?? []).filter((p) => p.doi && p.doi_verified).map((p) => p.doi!.toLowerCase()),
+);
+export const isVerifiedDoi = (doi?: string) => !!doi && verifiedDois.has(doi.toLowerCase());

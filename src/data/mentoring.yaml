@@ -1,6 +1,21 @@
-# Mentoring & Outreach — filled in Phase 2 from the CV
-philosophy: ""
-programs: []      # e.g. CCSEP, IRTA postbac, HS-SIP, graduate SIP, IIEST alumni mentoring
-judging: []
-teaching: []
+philosophy: >-
+  We judge mentoring by the independence, skills and scientific products that trainees
+  develop. Trainees so far have ranged from high-school students to graduate interns,
+  and several are co-authors on the resulting manuscripts. In the lab, each trainee
+  will start from tested, shared code and data, so their work builds toward open
+  software and benchmarks.
+programs:
+  - Graduate Summer Internship Program, co-mentor (2026)
+  - IIEST Shibpur Alumni Network Program, co-mentor (2025–26)
+  - Postbaccalaureate fellowship mentor (2024–26)
+  - High School Summer Internship Program, mentor (2023)
+  - Postbaccalaureate IRTA program, mentor (2020)
+  - Community College Summer Enrichment Program, mentor (2018); Summer Research Mentorship Award
+judging:
+  - Fellows Award for Research Excellence (FARE), judge (2023, 2026)
+  - Graduate Student Research Symposium, judge (2024)
+  - Postbaccalaureate Poster Presentation, judge (2020)
+teaching:
+  - "Teaching assistant, IIT Bombay (2005–09): Computer Programming and Utilization; Design and Analysis of Algorithms; Linear Optimization; Foundations of Parallel Computing"
+  - Scientists Teaching Science, nine-week pedagogy course (2018)
 outreach: []
