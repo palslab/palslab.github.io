@@ -1,0 +1,39 @@
+---
+import Section from '../Section.astro';
+import { site, trainees } from '../../lib/data';
+const pi = site.pi;
+const linkLabels: Record<string, string> = { cv: 'CV', scholar: 'Google Scholar', orcid: 'ORCID', github: 'GitHub', linkedin: 'LinkedIn' };
+const links = Object.entries(pi.links ?? {}).filter(([, v]) => v);
+---
+<Section id="team" title="Team">
+  <div class="team-grid">
+    <article class="person">
+      {pi.photo
+        ? <img src={pi.photo} alt={`Portrait of ${pi.name}`} width="240" height="240" loading="lazy" />
+        : <div class="photo-ph" role="img" aria-label="Photo to be added">{pi.name.split(' ').map((w) => w[0]).join('')}</div>}
+      <h3>{pi.name}</h3>
+      <p class="smallcaps">{pi.title || 'Principal Investigator'}</p>
+      {pi.affiliation && <p class="aff">{pi.affiliation}</p>}
+    </article>
+    <div class="pi-bio">
+      {pi.bio ? <p>{pi.bio}</p> : <p class="placeholder">Short bio to be added.</p>}
+      {links.length > 0 && (
+        <ul class="pills">{links.map(([k, v]) => <li><a class="pill" href={v}>{linkLabels[k] ?? k}</a></li>)}</ul>
+      )}
+    </div>
+  </div>
+  <h3 class="smallcaps trainees-h">Trainees mentored</h3>
+  {trainees.length
+    ? <ul class="trainees">{trainees.map((t) => <li><strong>{t.name}</strong>{t.program && ` — ${t.program}`}{t.years && ` (${t.years})`}{t.now && `. Now: ${t.now}`}</li>)}</ul>
+    : <p class="placeholder">Listed with each trainee's permission.</p>}
+</Section>
+<style>
+  .team-grid { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; }
+  @media (max-width: 640px) { .team-grid { grid-template-columns: 1fr; } }
+  .person img, .photo-ph { width: 240px; height: 240px; border-radius: var(--radius); object-fit: cover; }
+  .photo-ph { display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-size: 3rem; font-weight: 800; }
+  .person h3 { margin: 14px 0 2px; }
+  .person .smallcaps { margin: 0; }
+  .aff { margin: 4px 0 0; color: var(--muted); font-size: 0.95rem; }
+  .trainees-h { margin-top: 40px; }
+</style>

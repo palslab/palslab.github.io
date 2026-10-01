@@ -1,0 +1,55 @@
+# Publications. Phase 1: placeholders only (show: false entries never render).
+# Fields:
+#   id, authors (list; PI bolded automatically), title, venue, year, doi,
+#   type: journal | conference | preprint | chapter
+#   roles: { co_first: [author names], corresponding: [author names] }
+#   status: published | under-review | in-preparation
+#   show: true|false   (false = excluded from build; default for in-preparation)
+#   selected: true     (one of the 5 headline papers on the home page)
+- id: placeholder-journal
+  authors: [A. Author, Soumitra Pal, B. Author]
+  title: "Placeholder journal article (replaced in Phase 2)"
+  venue: Journal Name
+  year: 2026
+  doi: ""
+  type: journal
+  roles: { co_first: [A. Author, Soumitra Pal], corresponding: [Soumitra Pal] }
+  status: published
+  show: true
+  selected: true
+- id: placeholder-conference
+  authors: [Soumitra Pal, C. Author]
+  title: "Placeholder conference paper (replaced in Phase 2)"
+  venue: Conference Name
+  year: 2025
+  doi: ""
+  type: conference
+  status: published
+  show: true
+  selected: true
+- id: placeholder-preprint
+  authors: [Soumitra Pal, D. Author]
+  title: "Placeholder preprint (replaced in Phase 2)"
+  venue: Preprint server
+  year: 2025
+  doi: ""
+  type: preprint
+  status: under-review
+  show: true
+- id: placeholder-chapter
+  authors: [Soumitra Pal]
+  title: "Placeholder book chapter (replaced in Phase 2)"
+  venue: Book title
+  year: 2024
+  doi: ""
+  type: chapter
+  status: published
+  show: true
+- id: placeholder-in-prep
+  authors: [Soumitra Pal]
+  title: "In-preparation item — must NOT appear in the build"
+  venue: ""
+  year: 2026
+  type: journal
+  status: in-preparation
+  show: false

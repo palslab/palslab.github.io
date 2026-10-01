@@ -1,0 +1,5 @@
+# Custom domain (optional, future). To enable:
+#   1. Copy this file to public/CNAME (no extension) and replace the line below with your domain only.
+#   2. Set `site` in astro.config.mjs to https://<your-domain>.
+#   3. Create the DNS records GitHub lists for custom domains, then enable "Enforce HTTPS".
+# www.example.org

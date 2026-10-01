@@ -1,0 +1,60 @@
+---
+import { site } from '../lib/data';
+const items = [
+  { href: '/#approach', label: 'Approach' },
+  { href: '/#research', label: 'Research' },
+  { href: '/#ai-ml', label: 'AI & ML' },
+  { href: '/#software', label: 'Software' },
+  { href: '/#news', label: 'News' },
+  { href: '/publications/', label: 'Publications' },
+  { href: '/#mentoring', label: 'Mentoring' },
+  { href: '/#join', label: 'Join Us' },
+  { href: '/#team', label: 'Team' },
+  { href: '/#contact', label: 'Contact' },
+];
+---
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="/">
+      <span class="brand-name">{site.lab_name}</span>
+      <span class="brand-sub">{site.subtitle}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+      <span class="sr-only">Menu</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      {items.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  if (btn && menu) {
+    const set = (open: boolean) => { btn.setAttribute('aria-expanded', String(open)); menu.classList.toggle('open', open); };
+    btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
+    menu.addEventListener('click', (e) => { if ((e.target as HTMLElement).closest('a')) set(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { set(false); } });
+  }
+</script>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; min-height: var(--nav-h); gap: 16px; }
+  .brand { display: flex; flex-direction: column; text-decoration: none; line-height: 1.1; }
+  .brand-name { font-weight: 800; font-size: 1.2rem; color: var(--accent); letter-spacing: 0.02em; }
+  .brand-sub { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .nav-menu { display: flex; flex-wrap: wrap; gap: 2px 14px; list-style: none; margin: 0; padding: 0; justify-content: flex-end; }
+  .nav-menu a { color: var(--ink); text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 2px; display: inline-block; }
+  .nav-menu a:hover { color: var(--warm); }
+  .nav-toggle { display: none; background: none; border: 0; color: var(--accent); padding: 8px; cursor: pointer; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 960px) {
+    .nav-toggle { display: block; }
+    .nav-menu { display: none; position: absolute; top: var(--nav-h); left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); flex-direction: column; padding: 8px 20px 16px; }
+    .nav-menu.open { display: flex; }
+    .nav-menu a { padding: 10px 0; display: block; }
+  }
+</style>

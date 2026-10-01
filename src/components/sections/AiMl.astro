@@ -1,0 +1,12 @@
+---
+import Section from '../Section.astro';
+import { aiml } from '../../lib/data';
+---
+<Section id="ai-ml" title="AI & Machine Learning">
+  <ul class="aiml">
+    {aiml.map((x) => <li>{x}</li>)}
+  </ul>
+</Section>
+<style>
+  .aiml { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 28px; padding-left: 20px; margin: 0; }
+</style>

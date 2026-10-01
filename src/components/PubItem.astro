@@ -1,0 +1,22 @@
+---
+import { site, doiUrl, type Publication } from '../lib/data';
+interface Props { pub: Publication }
+const { pub } = Astro.props;
+const coFirst = new Set(pub.roles?.co_first ?? []);
+const corr = new Set(pub.roles?.corresponding ?? []);
+const typeLabel = { journal: 'Journal', conference: 'Conference', preprint: 'Preprint', chapter: 'Book chapter' }[pub.type];
+---
+<li data-year={pub.year} data-type={pub.type}>
+  <span class="pub-authors">
+    {pub.authors.map((a, i) => (
+      <Fragment>
+        {a === site.pi.name ? <strong>{a}</strong> : a}{coFirst.has(a) && <sup>†</sup>}{corr.has(a) && <sup>*</sup>}{i < pub.authors.length - 1 ? ', ' : ''}
+      </Fragment>
+    ))}.
+  </span>
+  <span class="pub-title"> {pub.title}.</span>
+  <span class="pub-meta"> <em>{pub.venue}</em>{pub.venue ? ', ' : ''}{pub.year}.
+    {pub.status === 'under-review' && <span class="smallcaps"> Under review.</span>}
+    {pub.doi && <a href={doiUrl(pub.doi)}>doi:{pub.doi}</a>}
+  </span>
+</li>

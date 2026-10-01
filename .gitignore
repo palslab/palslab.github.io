@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+*.log
+review/**/*.tmp
+
+# Private source material (job application docs, unpublished results) — never commit
+source/
+
+# Private planning docs (mention the application and unpublished results) — keep local only
+CLAUDE.md
+PLAYBOOK.md
+# Draft pages with unpublished material — never in the public repo
+src/content/drafts/*
+!src/content/drafts/README.md

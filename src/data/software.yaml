@@ -1,0 +1,20 @@
+# Software cards. Only add `repo` once the URL is verified (HTTP 200/301).
+# Fields: name, blurb, paper_doi, repo, docs
+- name: EvoGeneX
+  blurb: ""
+- name: PINNOU
+  blurb: ""
+- name: JUDI
+  blurb: ""
+- name: Co-SELECT
+  blurb: ""
+- name: EMS2
+  blurb: ""
+- name: qPMS10
+  blurb: ""
+- name: perfectread
+  blurb: ""
+- name: KCMBT
+  blurb: ""
+- name: Hybrid-DCA
+  blurb: ""

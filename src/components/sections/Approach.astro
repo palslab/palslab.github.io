@@ -1,0 +1,18 @@
+---
+import Section from '../Section.astro';
+import { approach } from '../../lib/data';
+---
+<Section id="approach" title="Approach">
+  <div class="grid grid-3">
+    {approach.map((a) => (
+      <div class="approach-col">
+        <h3>{a.title}</h3>
+        <p>{a.text}</p>
+      </div>
+    ))}
+  </div>
+</Section>
+<style>
+  .approach-col h3 { font-size: 1.4rem; color: var(--accent); margin: 0 0 8px; }
+  .approach-col { border-top: 3px solid var(--accent); padding-top: 16px; }
+</style>

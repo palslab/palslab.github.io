@@ -1,0 +1,9 @@
+---
+import Section from '../Section.astro';
+import { join, site } from '../../lib/data';
+const email = site.contact.email || site.pi.email;
+---
+<Section id="join" title="Join Us">
+  <p class="lead">{join.text}</p>
+  {email && <p><a class="button" href={`mailto:${email}`}>Email the PI</a></p>}
+</Section>

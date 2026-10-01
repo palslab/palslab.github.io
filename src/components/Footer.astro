@@ -1,0 +1,17 @@
+---
+import { site } from '../lib/data';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>{site.lab_name}</strong> · {site.subtitle}</p>
+    {site.funding && <p>{site.funding}</p>}
+    {site.disclaimer && <p class="disclaimer">{site.disclaimer}</p>}
+    <p>© {year} {site.pi.name}</p>
+  </div>
+</footer>
+<style>
+  .site-footer { background: var(--accent-ink); color: #e9e6f5; padding: 36px 0; font-size: 0.92rem; }
+  .site-footer p { margin: 4px 0; }
+  .disclaimer { opacity: 0.9; }
+</style>

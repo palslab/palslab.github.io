@@ -1,0 +1,84 @@
+---
+import Base from '../../layouts/Base.astro';
+import PubItem from '../../components/PubItem.astro';
+import { publications, type Publication } from '../../lib/data';
+
+const groups: { key: Publication['type']; label: string }[] = [
+  { key: 'journal', label: 'Journal articles' },
+  { key: 'conference', label: 'Conference papers' },
+  { key: 'preprint', label: 'Preprints / under review' },
+  { key: 'chapter', label: 'Book chapters' },
+];
+const years = [...new Set(publications.map((p) => p.year))].sort((a, b) => b - a);
+const byYear = (list: Publication[]) => {
+  const m = new Map<number, Publication[]>();
+  for (const p of list) m.set(p.year, [...(m.get(p.year) ?? []), p]);
+  return [...m.entries()].sort((a, b) => b[0] - a[0]);
+};
+---
+<Base title="Publications">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Publications</h1>
+      <p class="legend">Lab PI in bold · † co-first author · * corresponding author</p>
+      <form class="filters" role="search" onsubmit="return false">
+        <label>Year
+          <select id="f-year">
+            <option value="">All years</option>
+            {years.map((y) => <option value={y}>{y}</option>)}
+          </select>
+        </label>
+        <label class="grow">Search
+          <input id="f-q" type="search" placeholder="Title, author or venue" autocomplete="off" />
+        </label>
+      </form>
+      <p id="f-count" class="pub-meta" aria-live="polite"></p>
+      {groups.map(({ key, label }) => {
+        const list = publications.filter((p) => p.type === key);
+        return list.length > 0 && (
+          <section class="pub-group" aria-labelledby={`g-${key}`}>
+            <h2 id={`g-${key}`}>{label}</h2>
+            {byYear(list).map(([y, ps]) => (
+              <div class="year-group">
+                <h3>{y}</h3>
+                <ul class="pub-list">{ps.map((p) => <PubItem pub={p} />)}</ul>
+              </div>
+            ))}
+          </section>
+        );
+      })}
+    </div>
+  </section>
+</Base>
+
+<script>
+  const year = document.getElementById('f-year') as HTMLSelectElement;
+  const q = document.getElementById('f-q') as HTMLInputElement;
+  const count = document.getElementById('f-count')!;
+  const items = [...document.querySelectorAll<HTMLLIElement>('.pub-list li')];
+  function apply() {
+    const y = year.value, s = q.value.trim().toLowerCase();
+    let n = 0;
+    for (const li of items) {
+      const ok = (!y || li.dataset.year === y) && (!s || li.textContent!.toLowerCase().includes(s));
+      li.hidden = !ok; if (ok) n++;
+    }
+    document.querySelectorAll<HTMLElement>('.year-group, .pub-group').forEach((g) => {
+      g.hidden = !g.querySelector('li:not([hidden])');
+    });
+    count.textContent = `${n} of ${items.length} publications shown`;
+  }
+  year.addEventListener('change', apply);
+  q.addEventListener('input', apply);
+  apply();
+</script>
+
+<style>
+  .filters { display: flex; flex-wrap: wrap; gap: 16px; margin: 24px 0 8px; }
+  .filters label { display: flex; flex-direction: column; font-size: 0.85rem; font-weight: 600; color: var(--muted); gap: 4px; }
+  .filters .grow { flex: 1 1 240px; }
+  .filters select, .filters input { font: inherit; padding: 8px 10px; border: 1px solid #8d8a99; border-radius: 6px; color: var(--ink); background: #fff; min-width: 0; width: 100%; }
+  .pub-group h2 { font-size: 1.3rem; color: var(--accent); margin: 40px 0 0; }
+  .year-group h3 { font-size: 1rem; color: var(--muted); margin: 20px 0 0; }
+  .legend { color: var(--muted); font-size: 0.9rem; }
+</style>

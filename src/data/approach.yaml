@@ -1,0 +1,7 @@
+# Approach columns (home page). Short, vision-level.
+- title: Represent
+  text: "Compact, interpretable models of cell state, chosen by held-out performance."
+- title: Ground
+  text: "Regulatory, functional and evolutionary evidence withheld from training, used to test the models."
+- title: Perturb
+  text: "Predict and rank interventions, and beat simple baselines or say so."

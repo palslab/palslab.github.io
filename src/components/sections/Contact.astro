@@ -1,0 +1,16 @@
+---
+import Section from '../Section.astro';
+import { site } from '../../lib/data';
+const email = site.contact.email || site.pi.email;
+---
+<Section id="contact" title="Contact">
+  <address class="contact">
+    <p><strong>{site.pi.name}</strong></p>
+    {site.contact.address.map((l) => <p>{l}</p>)}
+    {email ? <p><a href={`mailto:${email}`}>{email}</a></p> : <p class="placeholder">Email to be added.</p>}
+  </address>
+</Section>
+<style>
+  .contact { font-style: normal; }
+  .contact p { margin: 2px 0; }
+</style>

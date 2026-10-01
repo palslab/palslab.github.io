@@ -1,0 +1,27 @@
+---
+import Section from '../Section.astro';
+import { research, pubById, doiUrl } from '../../lib/data';
+---
+<Section id="research" title="Research">
+  <div class="themes">
+    {research.map((t) => {
+      const papers = t.papers.map((id) => pubById.get(id)).filter(Boolean);
+      return (
+        <article class="theme" id={`theme-${t.id}`}>
+          <h3>{t.theme}</h3>
+          {t.summary ? <p>{t.summary}</p> : <p class="placeholder">Summary to be added.</p>}
+          {papers.length > 0 && (
+            <ul class="theme-papers">
+              {papers.map((p) => <li>{p!.doi ? <a href={doiUrl(p!.doi)}>{p!.title}</a> : p!.title} <span class="pub-meta">({p!.venue}, {p!.year})</span></li>)}
+            </ul>
+          )}
+        </article>
+      );
+    })}
+  </div>
+</Section>
+<style>
+  .themes { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .theme h3 { margin: 0 0 8px; font-size: 1.2rem; }
+  .theme-papers { padding-left: 18px; margin: 8px 0 0; font-size: 0.95rem; }
+</style>

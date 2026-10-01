@@ -1,0 +1,10 @@
+# Trainees mentored. Rendered ONLY when consent: true.
+# Photos ONLY when photo_consent: true.
+# Fields: name, role, program, years, now, consent, photo_consent, photo
+- name: Placeholder Trainee
+  role: ""
+  program: ""
+  years: ""
+  now: ""
+  consent: false
+  photo_consent: false

@@ -1,0 +1,4 @@
+# News items, newest first is not required (sorted at build time).
+# Fields: date (YYYY-MM-DD), text, link (optional, verified)
+- date: 2026-10-01
+  text: "Placeholder news item (replaced in Phase 2)."

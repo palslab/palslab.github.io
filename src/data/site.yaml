@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# site.yaml — the ONLY file that holds affiliation, address, email, funding
+# and employer-specific text. Moving institutions = edit this file only.
+# ---------------------------------------------------------------------------
+lab_name: Pal Lab
+subtitle: Computational Biology
+tagline: GROUNDING VIRTUAL CELLS
+site_url: https://palslab.github.io
+
+# Hero welcome (vision level only — no aims, no results)
+welcome: >-
+  We build predictive, experimentally grounded models of cell state: models that
+  represent a cell's molecular state, detect its departure from health, and predict
+  the interventions that restore it. Photoreceptors are our first system.
+
+pi:
+  name: Soumitra Pal
+  title: ""              # e.g. "Principal Investigator" — filled in Phase 2
+  affiliation: ""        # institution line, filled in Phase 2
+  photo: ""              # e.g. /images/pi.jpg (put file in public/images/)
+  bio: ""                # short bio, filled in Phase 2
+  email: ""              # personal/lab email, filled in Phase 2
+  links:                 # leave blank to hide a link
+    cv: ""
+    scholar: ""
+    orcid: ""
+    github: ""
+    linkedin: ""
+
+contact:
+  email: ""
+  address: []            # list of lines
+
+funding: ""              # optional funding/acknowledgement line
+disclaimer: "Personal research website of Soumitra Pal. Not an official website of any employer."

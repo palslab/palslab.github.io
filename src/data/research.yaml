@@ -1,0 +1,32 @@
+# Research themes. status: live | draft (draft never renders).
+# Fields: id, theme, summary, papers (publication ids), status
+- id: predictive-models
+  theme: Predictive models of cell state and dysfunction
+  summary: ""
+  papers: []
+  status: live
+- id: expression-evolution
+  theme: Evolution of gene expression
+  summary: ""
+  papers: []
+  status: live
+- id: photoreceptor-evolution
+  theme: Photoreceptor evolution and development
+  summary: ""
+  papers: []
+  status: live
+- id: single-cell-atlases
+  theme: Single-cell atlases and sex differences
+  summary: ""
+  papers: []
+  status: live
+- id: regulatory-genomics
+  theme: Regulatory genomics
+  summary: ""
+  papers: []
+  status: live
+- id: algorithms-hpc
+  theme: Algorithms and high-performance computing
+  summary: ""
+  papers: []
+  status: live

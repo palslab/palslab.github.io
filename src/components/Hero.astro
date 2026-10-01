@@ -1,0 +1,41 @@
+---
+import { site } from '../lib/data';
+// Placeholder abstract art: a trajectory through a cell-state manifold, generated in code.
+// (Phase 3 replaces this with the final design.)
+const W = 560, H = 360;
+const pts: [number, number][] = [];
+for (let i = 0; i <= 60; i++) {
+  const t = i / 60;
+  pts.push([40 + t * 480, 200 - 110 * Math.sin(t * Math.PI * 1.15) + 40 * Math.sin(t * 9)]);
+}
+const path = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ');
+const contours = [0, 1, 2, 3, 4].map((k) => {
+  const r = 60 + k * 38;
+  return `M${280 - r * 2},${190} C${280 - r},${190 - r} ${280 + r},${190 - r} ${280 + r * 2},${190} C${280 + r},${190 + r * 0.6} ${280 - r},${190 + r * 0.6} ${280 - r * 2},${190} Z`;
+});
+---
+<section class="hero" aria-labelledby="hero-h">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="hero-kicker">{site.lab_name} · {site.subtitle}</p>
+      <h1 id="hero-h" class="hero-tagline">{site.tagline}</h1>
+      <p class="hero-welcome">{site.welcome}</p>
+      <a class="button hero-cta" href="#research">Our research</a>
+    </div>
+    <svg class="hero-art" viewBox={`0 0 ${W} ${H}`} aria-hidden="true" focusable="false">
+      {contours.map((d, k) => <path d={d} fill="none" stroke="#fff" stroke-opacity={0.08 + k * 0.03} />)}
+      <path d={path} fill="none" stroke="#f3b38f" stroke-width="3" stroke-linecap="round" />
+      {pts.filter((_, i) => i % 10 === 0).map(([x, y]) => <circle cx={x} cy={y} r="5" fill="#fff" />)}
+    </svg>
+  </div>
+</section>
+<style>
+  .hero { background: linear-gradient(135deg, var(--accent-ink), var(--accent)); color: #fff; padding: 72px 0; }
+  .hero-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+  .hero-kicker { font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.85; margin: 0 0 10px; }
+  .hero-tagline { color: #fff; font-size: clamp(1.9rem, 4.6vw, 3rem); letter-spacing: 0.06em; margin: 0 0 18px; font-weight: 800; }
+  .hero-welcome { font-size: 1.15rem; max-width: 56ch; opacity: 0.95; }
+  .hero-cta { background: #fff; color: var(--accent); margin-top: 10px; }
+  .hero-cta:hover { background: var(--accent-soft); color: var(--accent-ink); }
+  @media (max-width: 800px) { .hero-inner { grid-template-columns: 1fr; } .hero-art { max-width: 420px; } }
+</style>

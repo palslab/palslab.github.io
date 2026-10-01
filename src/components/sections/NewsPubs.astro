@@ -1,0 +1,35 @@
+---
+import Section from '../Section.astro';
+import PubItem from '../PubItem.astro';
+import { news, publications, fmtDate } from '../../lib/data';
+const latest = news.slice(0, 6);
+const selected = publications.filter((p) => p.selected).slice(0, 5);
+---
+<Section id="news" title="News & Publications">
+  <div class="np">
+    <div>
+      <h3 class="smallcaps">Latest news</h3>
+      <ul class="news">
+        {latest.map((n) => (
+          <li><time datetime={n.date.toISOString().slice(0, 10)}>{fmtDate(n.date)}</time>
+            <span>{n.link ? <a href={n.link}>{n.text}</a> : n.text}</span></li>
+        ))}
+      </ul>
+      <p><a href="/news/">All news →</a></p>
+    </div>
+    <div>
+      <h3 class="smallcaps">Selected publications</h3>
+      <ul class="pub-list">{selected.map((p) => <PubItem pub={p} />)}</ul>
+      <p class="legend">† co-first author · * corresponding author</p>
+      <p><a class="button" href="/publications/">All publications</a></p>
+    </div>
+  </div>
+</Section>
+<style>
+  .np { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; }
+  @media (max-width: 800px) { .np { grid-template-columns: 1fr; } }
+  .news { list-style: none; padding: 0; margin: 0; }
+  .news li { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .news time { color: var(--muted); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+  .legend { font-size: 0.85rem; color: var(--muted); }
+</style>

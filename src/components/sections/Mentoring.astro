@@ -1,0 +1,18 @@
+---
+import Section from '../Section.astro';
+import { mentoring } from '../../lib/data';
+const groups = [
+  ['Programs', mentoring.programs],
+  ['Judging', mentoring.judging],
+  ['Teaching', mentoring.teaching],
+  ['Outreach', mentoring.outreach],
+] as const;
+---
+<Section id="mentoring" title="Mentoring & Outreach">
+  {mentoring.philosophy ? <p class="lead">{mentoring.philosophy}</p> : <p class="placeholder">Mentoring philosophy to be added.</p>}
+  <div class="grid grid-3">
+    {groups.filter(([, l]) => l && l.length).map(([h, l]) => (
+      <div><h3 class="smallcaps">{h}</h3><ul>{l.map((x) => <li>{x}</li>)}</ul></div>
+    ))}
+  </div>
+</Section>
