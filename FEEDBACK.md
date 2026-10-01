@@ -81,6 +81,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 1. Hero: illustration band moved above the text.
 
 ## Round 14 (2026-10-01)
-1. Team links: CV (public/cv.pdf), Google Scholar, ORCID (0000-0003-4840-3944, checksum valid), GitHub, LinkedIn. Scholar verified as PI's profile; LinkedIn blocks automated checks (link checker reports SKIP).
+1. Team links: CV (public/cv.pdf), Google Scholar, ORCID (0000-0003-4840-3944, checksum valid), GitHub, LinkedIn. Scholar verified as PI's profile; LinkedIn and Google Scholar block automated checks (link checker reports SKIP; both confirmed manually).
 2. Publications page: "Also on Google Scholar" link at the top.
 3. Public CV = CV V8 with home address and phone truly redacted (text removed, not just covered); metadata cleaned.

@@ -16,8 +16,8 @@ async function status(u) {
   } catch (e) { return `ERR ${e.cause?.code ?? e.name}`; }
 }
 const ok = (s) => [200, 301, 302, 303, 307, 308].includes(s);
-// Sites that refuse all automated requests (e.g. LinkedIn returns 999). Reported as SKIP, not FAIL.
-const SKIP_HOSTS = ['linkedin.com'];
+// Sites that refuse all automated requests (LinkedIn returns 999; Google Scholar returns 403 to CI runners). Reported as SKIP, not FAIL.
+const SKIP_HOSTS = ['linkedin.com', 'scholar.google.com'];
 
 const urls = new Map(); // url -> kind
 for (const f of fs.readdirSync('src/data')) {
