@@ -1,0 +1,35 @@
+name: Check links
+
+# Verifies every DOI/URL in src/data and marks verified DOIs/URLs in publications.yaml
+# (so they render as links). Run manually from the Actions tab, and monthly.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 1 * *'
+
+permissions:
+  contents: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: npm ci
+      - name: Check links and mark verified ones
+        run: |
+          set +e
+          node scripts/check-links.mjs --write | tee links.txt
+          grep '^FAIL' links.txt | while read -r line; do echo "::warning title=Broken or unverified link::$line"; done
+          echo "::notice title=Link check::$(tail -1 links.txt)"
+          exit 0
+      - name: Commit newly verified links
+        run: |
+          if git diff --quiet src/data/publications.yaml; then echo "No new verified links."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Mark verified links (automated link check)" src/data/publications.yaml
+          git push
