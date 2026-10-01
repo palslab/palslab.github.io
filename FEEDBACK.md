@@ -88,3 +88,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 ## Round 15 (2026-10-01)
 1. Attribution note (site.yaml `attribution`) at the top of Research and Publications: work carried out with colleagues in the groups of Anand Swaroop (NEI), Teresa Przytycka (NCBI), Sanguthevar Rajasekaran (UConn) and Abhiram Ranade (IIT Bombay), each linked (pages verified).
 2. "We/our" for past work changed to neutral wording in research themes, mentoring and one news item; hero lab voice kept; hidden Join/predictive texts unchanged.
+
+## Round 16 — old Google Site (2026-10-01)
+- sites.google.com/site/soumitrakp turned into a signpost (PI edited and published; Claude checked the draft and the live result): one Home page, "Soumitra Pal's research website has moved to the Pal Lab website." + button to https://palslab.github.io/. Unpublished CellVerse draft discarded and other pages removed at the PI's choice. No further maintenance needed.
