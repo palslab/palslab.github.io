@@ -51,5 +51,13 @@ contact:
   email: soumitra.pal@nih.gov
   address: []            # mailing address lines — add a work address when settled
 
+# Shown at the top of Research and Publications: where the work was done (update when moving)
+attribution: >-
+  This work was carried out by Soumitra Pal with colleagues in the groups of
+  [Anand Swaroop](https://irp.nih.gov/pi/anand-swaroop) (National Eye Institute),
+  [Teresa Przytycka](https://irp.nih.gov/pi/teresa-przytycka) (NCBI),
+  [Sanguthevar Rajasekaran](https://raj.cse.uconn.edu/) (University of Connecticut) and
+  [Abhiram Ranade](https://www.cse.iitb.ac.in/~ranade/) (IIT Bombay).
+
 funding: ""
 disclaimer: "Personal research website of Soumitra Pal. Not an official website of any employer."

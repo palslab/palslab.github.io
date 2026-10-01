@@ -84,3 +84,7 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 1. Team links: CV (public/cv.pdf), Google Scholar, ORCID (0000-0003-4840-3944, checksum valid), GitHub, LinkedIn. Scholar verified as PI's profile; LinkedIn and Google Scholar block automated checks (link checker reports SKIP; both confirmed manually).
 2. Publications page: "Also on Google Scholar" link at the top.
 3. Public CV = CV V8 with home address and phone truly redacted (text removed, not just covered); metadata cleaned.
+
+## Round 15 (2026-10-01)
+1. Attribution note (site.yaml `attribution`) at the top of Research and Publications: work carried out with colleagues in the groups of Anand Swaroop (NEI), Teresa Przytycka (NCBI), Sanguthevar Rajasekaran (UConn) and Abhiram Ranade (IIT Bombay), each linked (pages verified).
+2. "We/our" for past work changed to neutral wording in research themes, mentoring and one news item; hero lab voice kept; hidden Join/predictive texts unchanged.

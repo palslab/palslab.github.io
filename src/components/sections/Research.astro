@@ -1,8 +1,10 @@
 ---
 import Section from '../Section.astro';
-import { research, pubById, pubLink } from '../../lib/data';
+import { research, pubById, pubLink, site } from '../../lib/data';
+import InlineLinks from '../InlineLinks.astro';
 ---
 <Section id="research" title="Research">
+  {site.attribution && <p class="attribution"><InlineLinks text={site.attribution} /></p>}
   <div class="themes">
     {research.map((t) => {
       const papers = t.papers.map((id) => pubById.get(id)).filter(Boolean);
@@ -21,6 +23,7 @@ import { research, pubById, pubLink } from '../../lib/data';
   </div>
 </Section>
 <style>
+  .attribution { max-width: 75ch; color: var(--body); margin: -8px 0 32px; font-size: 0.98rem; }
   .themes { display: grid; gap: 28px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .theme h3 { margin: 0 0 8px; font-size: 1.2rem; }
   .theme-papers { padding-left: 18px; margin: 8px 0 0; font-size: 0.95rem; }

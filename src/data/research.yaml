@@ -17,24 +17,24 @@
     How does gene expression evolve: neutrally, under constraint, or adaptively? EvoGeneX
     models expression across species with Ornstein–Uhlenbeck processes and uncovered
     tissue- and sex-specific patterns of expression evolution in the Drosophila genus.
-    PINNOU extends this with physics-informed neural networks. We apply these methods to
-    retinal transcriptomes from more than 100 species, including adaptive expression in
-    nocturnal birds.
+    PINNOU extends this with physics-informed neural networks. These methods are now
+    being applied to retinal transcriptomes from more than 100 species, including adaptive
+    expression in nocturnal birds.
   papers: [jcb-2023-evogenex, pinnou-2026, cellsys-2025-tumor]
   status: live
 - id: photoreceptor-evolution
   theme: Photoreceptor evolution and development
   summary: >-
-    Rod photoreceptors enable dim-light vision. We trace how the MAF and OTX transcription
-    factor families, key to photoreceptor specification, evolved across Metazoa through
-    two rounds of whole-genome duplication, and study rod development in birds and
-    mammals and transcriptional changes in the aging retina.
+    Rod photoreceptors enable dim-light vision. This work traces how the MAF and OTX
+    transcription factor families, key to photoreceptor specification, evolved across
+    Metazoa through two rounds of whole-genome duplication, and examines rod development
+    in birds and mammals and transcriptional changes in the aging retina.
   papers: [maf-otx-2026, agingcell-2025]
   status: live
 - id: single-cell-atlases
   theme: Single-cell atlases and sex differences
   summary: >-
-    As part of the Fly Cell Atlas we analyzed sex differences across adult fly tissues,
+    As part of the Fly Cell Atlas, Soumitra analyzed sex differences across adult fly tissues,
     identifying sex-biased cell counts and gene expression. Follow-up work showed that
     cell-type-specific allometry controls sex differences in organ size, that X-chromosome
     dosage compensation varies by cell type, and how Transformer and sex-chromosome

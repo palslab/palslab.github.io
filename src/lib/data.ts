@@ -16,7 +16,7 @@ export interface Site {
   pi: { name: string; title: string; affiliation: string | string[]; photo: string; bio: string; email: string;
         links: Record<string, string> };
   contact: { email: string; address: string[] };
-  funding: string; disclaimer: string;
+  funding: string; disclaimer: string; attribution?: string;
 }
 export interface Publication {
   id: string; authors: string[]; title: string; venue: string; year: number;

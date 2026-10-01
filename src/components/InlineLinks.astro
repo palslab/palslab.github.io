@@ -1,0 +1,10 @@
+---
+// Renders plain text in which [text](https://url) becomes a link.
+interface Props { text: string }
+const { text } = Astro.props;
+const segs = text.replace(/\s+/g, ' ').trim().split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/).map((seg) => {
+  const m = seg.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+  return m ? { text: m[1], href: m[2] } : { text: seg };
+});
+---
+{segs.map((s) => (s.href ? <a href={s.href}>{s.text}</a> : s.text))}
