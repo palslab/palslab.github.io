@@ -17,7 +17,7 @@ pi:
   name: Soumitra Pal
   title: Staff Scientist
   affiliation: National Eye Institute, National Institutes of Health
-  photo: ""              # add source/headshot.jpg → public/images/pi.jpg, then set "/images/pi.jpg"
+  photo: /images/pi.jpg   # 800 px; /images/pi-480.jpg used for normal screens
   bio: >-
     Soumitra Pal is a computational biologist trained in computer science (B.E., IIEST
     Shibpur; M.Tech. and Ph.D., IIT Bombay). After designing DSP simulators at Texas
@@ -27,7 +27,7 @@ pi:
     gene-expression evolution and the Fly Cell Atlas. He now works with Anand Swaroop
     on retinal development, aging and evolution, using bulk and single-cell expression
     data from more than 100 species.
-  email: soumitrakp@gmail.com   # PROVISIONAL — confirm which address to publish
+  email: soumitra.pal@nih.gov
   links:                 # only verified URLs; blank = hidden (see TODO.md)
     cv: ""
     scholar: ""
@@ -36,7 +36,7 @@ pi:
     linkedin: ""
 
 contact:
-  email: soumitrakp@gmail.com   # PROVISIONAL
+  email: soumitra.pal@nih.gov
   address: []            # mailing address lines — add a work address when settled
 
 funding: ""

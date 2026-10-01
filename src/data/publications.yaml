@@ -131,11 +131,11 @@
   type: journal
   roles: { co_first: [Amelie Raz, Gabriela Vida, Sarah Stern, Sharvani Mahadevaraju, Jaclyn Fingerhut, Jennifer Viveiros, Soumitra Pal, Jasmine Grey, Mara Grace], corresponding: [Stephen DiNardo, Margaret T. Fuller] }
   status: published
-- id: jcb-2022-evogenex
+- id: jcb-2023-evogenex
   authors: [Soumitra Pal, Brian Oliver, Teresa M. Przytycka]
   title: "Stochastic Modeling of Gene Expression Evolution Uncovers Tissue- and Sex-Specific Properties of Expression Evolution in the Drosophila Genus"
-  venue: Journal of Computational Biology
-  year: 2022
+  venue: "Journal of Computational Biology 30: 21–40"
+  year: 2023
   doi: 10.1089/cmb.2022.0121
   doi_verified: true
   type: journal

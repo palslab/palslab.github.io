@@ -43,16 +43,12 @@ Unverified URLs:
 
 ## Software code locations (need PI confirmation)
 
-- [ ] PINNOU — no public repository found
-- [ ] qPMS10 — no repository found
-- [ ] Hybrid-DCA — no repository found
-- [ ] KCMBT — candidate https://github.com/abdullah009/kcmbt_mt (co-author's account; returns 200). Link it?
+- PINNOU, qPMS10, Hybrid-DCA, KCMBT: no code links for now — PI will add them later (round 1).
 - Verified (HTTP 200) and linked: ncbi/EvoGeneX, ncbi/JUDI, ncbi/Co-SELECT, soumitrakp/ems2, soumitrakp/perfectread
 
 ## Missing assets / decisions
 
-- [ ] Headshot: square ≥800 px → `source/headshot.jpg`
+- [ ] Fly Cell Atlas title: CV says "single-cell"; published title is likely "single-nucleus" — confirm
 - [ ] CV PDF for the public site (a version without home address/phone) → `public/cv.pdf`, then `pi.links.cv: /cv.pdf`
-- [ ] Public contact email (currently provisional soumitrakp@gmail.com)
 - [ ] Mailing address (currently none shown; CV has a home address — not used)
 - [ ] Trainee consent: set `consent: true` in people.yaml only after each person agrees

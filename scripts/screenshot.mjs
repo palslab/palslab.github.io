@@ -15,6 +15,10 @@ for (const width of [1280, 390, 360]) {
     await page.goto(base + path, { waitUntil: 'networkidle' });
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     if (overflow > 0) { console.log(`HSCROLL ${width}px ${path}: ${overflow}px`); problems++; }
+    // scroll through the page so lazy-loaded images load before the full-page capture
+    await page.evaluate(() => document.querySelectorAll('img[loading="lazy"]').forEach((i) => { i.loading = 'eager'; }));
+    await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } window.scrollTo(0, 0); });
+    await page.waitForLoadState('networkidle');
     if (width !== 360) await page.screenshot({ path: `${out}/${name}-${width}.png`, fullPage: true });
   }
   if (width === 1280) {

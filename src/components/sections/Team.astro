@@ -9,7 +9,7 @@ const links = Object.entries(pi.links ?? {}).filter(([, v]) => v);
   <div class="team-grid">
     <article class="person">
       {pi.photo
-        ? <img src={pi.photo} alt={`Portrait of ${pi.name}`} width="240" height="240" loading="lazy" />
+        ? <img src={pi.photo.replace(/\.jpg$/, '-480.jpg')} srcset={`${pi.photo.replace(/\.jpg$/, '-480.jpg')} 480w, ${pi.photo} 800w`} sizes="240px" alt={`Portrait of ${pi.name}`} width="240" height="240" loading="lazy" decoding="async" />
         : <div class="photo-ph" role="img" aria-label="Photo to be added">{pi.name.split(' ').map((w) => w[0]).join('')}</div>}
       <h3>{pi.name}</h3>
       {pi.title && <p class="smallcaps">{pi.title}</p>}

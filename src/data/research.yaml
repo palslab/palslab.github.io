@@ -20,7 +20,7 @@
     PINNOU extends this with physics-informed neural networks. We apply these methods to
     retinal transcriptomes from more than 100 species, including adaptive expression in
     nocturnal birds.
-  papers: [jcb-2022-evogenex, pinnou-2026, cellsys-2025-tumor]
+  papers: [jcb-2023-evogenex, pinnou-2026, cellsys-2025-tumor]
   status: live
 - id: photoreceptor-evolution
   theme: Photoreceptor evolution and development

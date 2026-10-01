@@ -13,3 +13,11 @@ Done:
 - Unpublished material only in the local, git-ignored draft page; check:drafts also reads local-only guard terms (scripts/private-guards.txt, git-ignored).
 - Links render only when verified; see TODO.md.
 Open questions: listed at the end of review/phase-2/CHECKLIST.md.
+
+## Round 1 (2026-10-01)
+1. Selected publications: keep the 5 proposed → no change.
+2. Contact email: soumitra.pal@nih.gov → set in site.yaml (pi.email, contact.email).
+3. No code links for PINNOU, qPMS10, Hybrid-DCA, KCMBT; PI will add later → left unlinked, noted in TODO.md.
+4. EvoGeneX JCB paper: 2022 was the preprint; published 2023 → year 2023, venue "Journal of Computational Biology 30: 21–40" (volume/pages from the research statement reference), id renamed jcb-2023-evogenex.
+5. Photos: used soumitra-headshot.jpeg, cropped to head-and-shoulders 900×900, exported 800 px and 480 px JPEG with metadata stripped (public/images/pi.jpg, pi-480.jpg); Team card uses srcset. Full-body photo not used (kept private in source/).
+Not answered yet: Fly Cell Atlas title wording (TODO.md).
