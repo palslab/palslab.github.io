@@ -8,6 +8,15 @@ const f = (n: number) => +n.toFixed(1);
 const alt = 'Illustration of the lab\'s research: a phylogeny of fruit-fly species with gene-expression curves, single-cell clusters of diverse cell types, a space of cell states in which photoreceptors change state, and a cross-section of the retina with rods and cones.';
 ---
 <section class:list={['hero', `hero-${mode}`]} aria-labelledby="hero-h">
+  {mode === 'concept' && (
+    <figure class="hero-figure">
+      <picture>
+        <source media="(max-width: 700px)" srcset="/images/lab-concept-m-900.webp" width="900" height="619" />
+        <img src="/images/lab-concept-1440.webp" srcset="/images/lab-concept-960.webp 960w, /images/lab-concept-1440.webp 1440w, /images/lab-concept-2172.webp 2172w"
+             sizes="100vw" width="2172" height="724" alt={alt} fetchpriority="high" decoding="async" />
+      </picture>
+    </figure>
+  )}
   <div class="container">
     <div class="hero-text">
       <div class="hero-head">
@@ -23,15 +32,7 @@ const alt = 'Illustration of the lab\'s research: a phylogeny of fruit-fly speci
       </div>
     </div>
   </div>
-  {mode === 'concept' ? (
-    <figure class="hero-figure">
-      <picture>
-        <source media="(max-width: 700px)" srcset="/images/lab-concept-m-900.webp" width="900" height="619" />
-        <img src="/images/lab-concept-1440.webp" srcset="/images/lab-concept-960.webp 960w, /images/lab-concept-1440.webp 1440w, /images/lab-concept-2172.webp 2172w"
-             sizes="100vw" width="2172" height="724" alt={alt} fetchpriority="high" decoding="async" />
-      </picture>
-    </figure>
-  ) : (
+  {mode === 'mosaic' && (
     <svg class="hero-art" viewBox={`0 0 ${art!.w} ${art!.h}`} preserveAspectRatio="xMinYMid slice" aria-hidden="true" focusable="false">
       {art!.dots.map((d) => <circle cx={f(d.x)} cy={f(d.y)} r={f(d.r)} fill-opacity={f(d.o * 100) / 100} class={d.k} />)}
       <circle cx={art!.ring.cx} cy={art!.ring.cy} r={art!.ring.r} class="ring" />
@@ -49,8 +50,8 @@ const alt = 'Illustration of the lab\'s research: a phylogeny of fruit-fly speci
   .hero-link { font-weight: 600; text-decoration: none; }
   .hero-link:hover { text-decoration: underline; }
 
-  /* Concept illustration: text in two columns, illustration as a full-width band below */
-  .hero-concept .hero-text { display: grid; grid-template-columns: 5fr 7fr; gap: 24px 56px; align-items: start; padding: 64px 0 28px; }
+  /* Concept illustration: full-width band at the top, text in two columns below */
+  .hero-concept .hero-text { display: grid; grid-template-columns: 5fr 7fr; gap: 24px 56px; align-items: start; padding: 28px 0 64px; }
   .hero-figure { margin: 0; }
   .hero-figure img { display: block; width: 100%; height: auto; max-height: 520px; object-fit: cover;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(180deg, transparent, #000 10%, #000 90%, transparent);
@@ -68,7 +69,7 @@ const alt = 'Illustration of the lab\'s research: a phylogeny of fruit-fly speci
   .ring { fill: none; stroke: var(--patch); stroke-width: 1.5; stroke-dasharray: 4 6; }
 
   @media (max-width: 860px) {
-    .hero-concept .hero-text { grid-template-columns: 1fr; padding: 44px 0 16px; }
+    .hero-concept .hero-text { grid-template-columns: 1fr; padding: 20px 0 44px; }
     .hero-concept .hero-sub { margin-bottom: 4px; }
     .hero-mosaic { display: block; min-height: 0; }
     .hero-mosaic .hero-text { padding: 48px 0 8px; max-width: none; }

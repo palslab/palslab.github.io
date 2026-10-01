@@ -76,3 +76,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 ## Round 12 (2026-10-01)
 1. Hero art: replaced the generated mosaic with the PI's lab concept illustration (source/lab_concept_figure.png → public/images/lab-concept-{960,1440,2172}.webp, 49–171 KB; phone crop lab-concept-m-900.webp showing the cell-state space and retina). Layout: hero text in two columns, illustration as a full-width band below with soft edges; descriptive alt text. Switch back with `hero_art: mosaic` in site.yaml.
    Lighthouse home: mobile 99/100/100/100 (LCP 2.1 s), desktop 100 across; CLS 0.
+
+## Round 13 (2026-10-01)
+1. Hero: illustration band moved above the text.
