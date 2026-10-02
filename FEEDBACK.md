@@ -100,3 +100,6 @@ Not answered yet: Fly Cell Atlas title wording (TODO.md).
 
 ## Round 19 (2026-10-01)
 1. Public CV replaced with V9 (header now palslab.github.io), address and phone redacted as before.
+
+## Round 20 (2026-10-02)
+1. Attribution now also names Srinivas Aluru (IIT Bombay project) and T. S. Jayram (IBM Research India internship); wording changed from "in the groups of" to "working with". Both profile pages verified.
